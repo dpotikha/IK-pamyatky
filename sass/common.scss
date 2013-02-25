@@ -46,28 +46,31 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 1000px;
-    color: #474747;
-    @include font;
-    font-size: 15px;
-    line-height: 1.4;
+    padding: 0 10px;
+    color: #000;
+    @include osl;
+    font-size: 16px;
+    line-height: 1.3;
+    background: #f3f2f2;
 }
 a{
-    color:#00919e;
+    color: #355e8d;
     &:hover{
-        text-decoration:none
+        text-decoration: none;
+        border-bottom: 0;
     }
 }
 .l-layout {
-    margin: 0 auto -120px;
+    margin: 0 auto -76px;
     position: relative;
     min-height: 100%;
     height: auto !important;
     height: 100%;
+    background: #fff;
 }
 .push {
     clear: both;
-    height: 120px;
+    height: 76px;
 }
 .wrapper {
     overflow: hidden;
@@ -78,14 +81,150 @@ a{
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
+.header {
+    padding: 10px 0 5px;
+    background: #f3f2f2;
+    @include border-radius(2px);
+} 
+.header__wrap {
+    padding: 13px 29px 7px 34px;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #b2b1b1;
+    @include box-shadow(0 0 3px rgba(0,0,0,.3));
+}
+.logo {
+    float: left;
+    margin-right: 30px;
+    a {
+        display: block;
+        @include sized-sprite($icons, logo);
+    }
+}
+.nav-wrap {
+    float: left;
+    padding-top: 8px;
+}
+.lang {
+    margin-bottom: 11px;
+    color: #FFF;
+    font-size: 11px;
+    a {
+        display: inline-block;
+        margin-right: 16px;
+        @include osr;
+        text-decoration: none;
+        border-bottom: 2px solid #d8dee6;
+        &:hover {
+            border-bottom: 0;
+        }
+    }
+    .active {
+        color: #7d7d7d;
+        border-bottom: 0;
+    }
+}
+.nav {
+    display: inline-block;
+    li {
+        display: inline-block;
+        margin-right: 23px;
+        font-size: 22px;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid #c2cedd;
+        &:hover {
+            border-bottom: 0;
+        }
+    }
+    .active {
+        a {
+            color: #8e8e8e;
+            border-bottom: 0;
+            font-size: 18px;
+        }
+    }
+}
+.rss { 
+    display: inline-block;
+    margin-left: 7px;
+    vertical-align: middle;
+    @include sized-sprite($icons, rss);
+}
+.header__search {
+    float: right;
+    padding-top: 3px;
+}
+.search {
+    position: relative;
+    display: inline-block;
+    margin: 13px 26px 0 0;
+    width: 350px;
+    vertical-align: top;
+}
+.search__text {
+    padding: 0 40px 0 10px;
+    width: 298px;
+    height: 33px;
+    color: #000;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #aaabab;
+    @include placeholder(#b8b8b8, Arial); 
+}
+.search__submit {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    padding-right: 30px;
+    @extend %hide-text;
+    @include sized-sprite($icons, glass);
+} 
+
+.logo-map {
+    display: inline-block;
+    font-size: 11px;
+    text-decoration: none;
+    color: #555;
+    font-family: Arial, sans-serif;
+    @include sized-sprite($icons, logo-map);
+}
+
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.main {
+    
+}
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
 .footer {
     position: relative;
-    height: 120px;
+    height: 76px;
+    line-height: 76px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #686868;
+    background: #f3f2f2; 
+    a {
+        color: #686868;
+    }
+    .copy {
+        float: left;
+    }
+    .support {
+        float: right;
+    }
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
+// .test {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 1196px;
+//     height: 750px;
+//     background: url(../img/test.png) 0 0 no-repeat;
+//     opacity: .7;
+// }

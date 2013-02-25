@@ -1,1 +1,29 @@
 @import "base";
+.content {
+    padding: 11px 0 0 35px;
+    overflow: hidden;
+    h1 {
+        margin-bottom: 18px;
+        color: #555;
+        font-size: 30px;
+        font-weight: normal;
+    }
+    h2 {
+        margin: 6px 0 23px;
+        color: #555;
+        font-size: 22px;
+        font-weight: normal;
+    }
+    p {
+        margin-bottom: 12px;
+    }
+    .about-us {
+        float: left;
+        width: 60%;
+        margin-right: 5%;
+    }
+    .more-maps {
+        float: left;
+        width: 35%;
+    }
+}
