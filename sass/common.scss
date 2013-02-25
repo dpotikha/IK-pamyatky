@@ -45,6 +45,12 @@ table {
 *{-webkit-text-size-adjust: none; }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
+::-webkit-selection {
+    background: #c2cedd;
+}
+::selection {
+    background: #c2cedd;
+}
 body{
     padding: 0 10px;
     color: #000;
@@ -78,6 +84,9 @@ a{
 .wrap {
     @extend %clr;
 }
+.clr {
+    clear: both;
+}
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
@@ -89,9 +98,7 @@ a{
 .header__wrap {
     padding: 13px 29px 7px 34px;
     background: #fff;
-    overflow: hidden;
-    border: 1px solid #b2b1b1;
-    @include box-shadow(0 0 3px rgba(0,0,0,.3));
+    @include box-shadow(0 0 4px rgba(0,0,0,.4));
 }
 .logo {
     float: left;
@@ -181,7 +188,30 @@ a{
     @extend %hide-text;
     @include sized-sprite($icons, glass);
 } 
-
+.drop-list {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 33px;
+    left: 0;
+    padding: 7px 10px 5px;
+    width: 400px;
+    border: 1px solid #aaabab;
+    font-size: 14px;
+    background: #fff;
+    li { 
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    i {
+        font: normal 11px Arial;
+        color: #606060;
+    }
+    b {
+        color: #c20e16;
+        font-weight: normal;
+    }
+}
 .logo-map {
     display: inline-block;
     font-size: 11px;
@@ -192,6 +222,49 @@ a{
 }
 
 /* -------------------------------------- //END Header ------------------------------------------ */
+
+/* ----------------------------------------- sidebar -------------------------------------------- */
+.sidebar {
+    float: left;
+    padding: 10px 7px 7px 11px;
+    width: 261px;
+    background: #fff;
+    @include box-shadow(0 0 4px rgba(0,0,0,.4));
+}
+
+.sidebar__title {
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+    i {
+        float: right;
+        margin-top: 6px;
+        @include sized-sprite($icons, plus);
+    }
+    .active {
+        i {
+            @include sized-sprite($icons, minus);
+        }
+    }
+}
+
+.filter {
+    li {
+        padding-left: 5px;
+        color: #555;
+        cursor: pointer;
+        font-size: 12px;
+        border-top: 1px solid #e2e2e2;
+    }
+    span {
+        display: inline-block;
+        font-size: 25px;
+        color: #50739c;
+        vertical-align: middle;
+    }
+}
+
+/* --------------------------------------- //END sidebar ---------------------------------------- */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
 .main {

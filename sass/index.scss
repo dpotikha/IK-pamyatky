@@ -1,1 +1,29 @@
 @import "base";
+.index {
+    .l-layout {
+        background: none;
+        position: relative;
+        z-index: 1000;
+        margin-bottom: 0;
+    }
+    .header {
+        background: none;
+    }
+    .push {
+        height: 0;
+    }
+}
+.map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}

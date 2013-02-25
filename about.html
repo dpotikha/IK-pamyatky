@@ -26,10 +26,10 @@
                 </div>
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">Карта</a></li>
-                        <li><a href="#">каталог</a></li>
+                        <li class="active"><a href="#">Карта</a></li>
+                        <li><a href="#">Каталог</a></li>
                         <li><a href="#">Улицы</a></li>
-                        <li class="active"><a href="#">О проекте</a></li>
+                        <li><a href="#">О проекте</a></li>
                     </ul>
                 </nav>
                 <a href="#" class="rss"></a>
@@ -37,13 +37,19 @@
             <div class="header__search">
                 <div class="search">
                     <form>
-                        <input type="text"class="search__text" placeholder="Улица, объект">
+                        <input type="text"class="search__text js-input" placeholder="Улица, объект">
                         <input type="submit"class="search__submit">
-                        <ul class=""></ul>
+                        <ul class="drop-list">
+                            <li><span><b>Андре</b>евская</span> <i>2 точки</i></li>
+                            <li><span><b>Андре</b>евский спуск</span> <i>45 точек</i></li>
+                            <li><span><b>Андре</b>я Первозванного площадь</span> <i>7 точек</i></li>
+                            <li><span><b>Андре</b>евская церковь</span> <i></i></li>
+                        </ul>
                     </form>
                 </div>
                 <a href="#" class="logo-map"></a>
             </div>
+            <div class="clr"></div>
         </div>
     </header>
     <div class="main content">
@@ -72,6 +78,5 @@
     </div>
     <div class="support">При поддержке <a href="#">Google Украина</a></div>
 </footer>
-<div class="test"></div>
 </body>
 </html>
