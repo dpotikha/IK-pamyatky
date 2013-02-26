@@ -15,6 +15,8 @@ $(document).ready(function() {
     });
 
 // ---------------- Filter -------------------------- //
+    $('.scroll-pane').jScrollPane();
+
     $(".sidebar__title").children().addClass("active");
     $(".sidebar__title").click(function(){
         if ($(this).children().hasClass("active")) {

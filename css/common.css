@@ -105,9 +105,9 @@ a:hover { text-decoration: none; border-bottom: 0; }
 .sidebar__title .active { background: url('../img/icons-se505ebb767.png') 0 -587px no-repeat; width: 21px; height: 21px; }
 
 .filter { font: normal 12px Arial; }
-.filter li { padding: 5px 0 5px 5px; color: #555; cursor: pointer; font-size: 12px; border-top: 1px solid #e2e2e2; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+.filter li { margin-right: 6px; padding: 5px 0 5px 5px; color: #555; cursor: pointer; font-size: 12px; border-top: 1px solid #e2e2e2; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 .filter li ul { display: none; padding: 8px 0 0 16px; }
-.filter li li { margin-bottom: 11px; border: 0; padding: 0; }
+.filter li li { margin: 0 0 11px; border: 0; padding: 0; }
 .filter .active-state { font-size: 30px; }
 .filter input { margin-right: 9px; }
 .filter i { display: inline-block; margin-right: 4px; }
