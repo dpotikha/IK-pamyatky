@@ -233,6 +233,7 @@ a{
 }
 
 .sidebar__title {
+    padding-bottom: 8px;
     font-size: 24px;
     font-weight: normal;
     cursor: pointer;
@@ -242,33 +243,99 @@ a{
         @include sized-sprite($icons, plus);
     }
     .active {
-        i {
-            @include sized-sprite($icons, minus);
-        }
+        @include sized-sprite($icons, minus);
     }
 }
 
 .filter {
+    //display: none;
+    font: normal 12px Arial;
     li {
-        padding-left: 5px;
+        padding: 5px 0 5px 5px;
         color: #555;
         cursor: pointer;
         font-size: 12px;
         border-top: 1px solid #e2e2e2;
+        @include user-select(none);
+        ul {
+            display: none;
+            padding: 8px 0 0 16px;
+        }
+        li {
+            margin-bottom: 11px;
+            border: 0;
+            padding: 0;
+        }
     }
-    span {
+    .active-state {
+        font-size: 30px;
+    }
+    input {
+        margin-right: 9px;
+    }
+    i { 
         display: inline-block;
-        font-size: 25px;
-        color: #50739c;
-        vertical-align: middle;
+        margin-right: 4px;
+    }
+    label {
+        cursor: pointer;
     }
 }
+.filter__more {
+    position: relative;
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    text-align: center;
+    margin: 0 5px 0 4px;
+    i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        @include sized-sprite($icons, plus2);
+    }
+    
+}
+.filter__more-act {
+    i {
+        top: 5px;
+        @include sized-sprite($icons, minus2);
+    }
+}
+.filter__extend-check {
+    label {
+        font-weight: bold;
+        color: #50739c;
+    } 
+    li {
+        label {
+            color: #555;
+            font-weight: normal;
+        }
+        
+    }
+    
+}
+.icon-street {@include sized-sprite($icons, street);}
+.icon-square {@include sized-sprite($icons, square);}
+.icon-park {@include sized-sprite($icons, park);}
+.icon-bridge {@include sized-sprite($icons, bridge);}
+.icon-gallery {@include sized-sprite($icons, gallery);}
+.icon-place {@include sized-sprite($icons, place);}
+.icon-palace {@include sized-sprite($icons, palace);}
+.icon-fountain {@include sized-sprite($icons, fountain);}
+.icon-secret {@include sized-sprite($icons, secret);}
+.icon-hotel {@include sized-sprite($icons, hotel);}
+.icon-trees {@include sized-sprite($icons, trees);}
+.icon-clock {@include sized-sprite($icons, clock);}
+.icon-famous {@include sized-sprite($icons, famous);}
 
 /* --------------------------------------- //END sidebar ---------------------------------------- */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
 .main {
-    
+     
 }
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
