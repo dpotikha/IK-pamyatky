@@ -40,6 +40,27 @@ $(document).ready(function() {
         }
     });
 
+    $(".filter_inner li div").click(function(){
+        if ($(this).children("span").hasClass("filter__more-act")) {
+            $(this).parent().children("ul").slideUp();
+            $(this).children().removeClass("filter__more-act");
+        }
+        else {
+            $(this).parent().children("ul").slideDown();
+            $(this).children("span").addClass("filter__more-act");
+        }
+    });
+
+    $(".filter_inner ul li").click(function(){
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+        }
+        else {
+            $(".filter_inner ul li").removeClass("active");
+            $(this).addClass("active");
+        }
+    });
+
     $(".check-all").change(function(){
         var check = $(this).parent().parent().children("ul").children("li").children("label").children("input");
         if ($(this).hasClass("js-active")) {

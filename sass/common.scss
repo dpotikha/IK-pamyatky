@@ -228,8 +228,6 @@ a{
     float: left;
     padding: 10px 7px 7px 11px;
     width: 261px;
-    background: #fff;
-    @include box-shadow(0 0 4px rgba(0,0,0,.4));
 }
 
 .sidebar__title {
@@ -252,7 +250,7 @@ a{
     font: normal 12px Arial;
     li {
         margin-right: 6px;
-        padding: 5px 0 5px 5px;
+        padding: 5px 0 5px;
         color: #555;
         cursor: pointer;
         font-size: 12px;
@@ -260,12 +258,12 @@ a{
         @include user-select(none);
         ul {
             display: none;
-            padding: 8px 0 0 16px;
+            padding-top: 8px
         }
         li {
-            margin: 0 0 11px;
+            margin: 0;
             border: 0;
-            padding: 0;
+            padding: 5px 0 5px 16px;
         }
     }
     .active-state {
@@ -313,10 +311,9 @@ a{
         label {
             color: #555;
             font-weight: normal;
-        }
+        } 
         
     }
-    
 }
 .icon-street {@include sized-sprite($icons, street);}
 .icon-square {@include sized-sprite($icons, square);}
@@ -331,6 +328,15 @@ a{
 .icon-trees {@include sized-sprite($icons, trees);}
 .icon-clock {@include sized-sprite($icons, clock);}
 .icon-famous {@include sized-sprite($icons, famous);}
+.icon-embassy {@include sized-sprite($icons, embassy);}
+.icon-lib {@include sized-sprite($icons, lib);}
+.icon-med {@include sized-sprite($icons, med);}
+
+.scroll-pane {
+    overflow: auto; 
+    outline: none;
+    height: 600px;
+}
 
 /* --------------------------------------- //END sidebar ---------------------------------------- */
 

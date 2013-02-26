@@ -1,20 +1,29 @@
 @import "base";
 .index {
     .l-layout {
-        background: none;
-        position: relative;
-        z-index: 1000;
+        background: none;     
         margin-bottom: 0;
     }
     .header {
+        position: relative;
         background: none;
+        z-index: 1000;
     }
     .push {
         height: 0;
     }
+    .filter {
+        height: 575px;
+    }
+    .sidebar {
+        position: relative;
+        z-index: 1000;
+        background: #fff;
+        @include box-shadow(0 0 4px rgba(0,0,0,.4));
+    }
 }
 .map {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;

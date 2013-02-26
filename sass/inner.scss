@@ -1,6 +1,6 @@
 @import "base";
 .content {
-    padding: 11px 0 0 35px;
+    padding: 11px 35px 20px;
     overflow: hidden;
     h1 {
         margin-bottom: 18px;
@@ -25,5 +25,50 @@
     .more-maps {
         float: left;
         width: 35%;
+    }
+}
+.filter_inner {
+    li {
+        .active {
+            position: relative;
+            background: #e7e7e7;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 11px;
+                top: 50%;
+                margin-top: -5px;
+                @include sized-sprite($icons, arr);
+            }
+            i {
+                @extend %gray;
+            }
+        }
+    }
+    .filter__extend-check {
+        font-weight: bold;
+        color: #50739c;
+        li {
+            font-weight: normal;
+        }
+    }
+}
+.catalog {
+    font-size: 11px;
+    font-family: Arial;
+    color: #8a8a8a;
+    a {
+        font-size: 12px;
+    }
+    p {
+        margin: 4px 0 12px;
+    }
+}
+.catalog-col {
+    width: 380px;
+    float: left;
+    margin-right: 20px;
+    li {
+        margin-bottom: 4px;
     }
 }
