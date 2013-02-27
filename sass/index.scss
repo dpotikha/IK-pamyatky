@@ -18,6 +18,7 @@
     .sidebar {
         position: relative;
         z-index: 1000;
+        margin-top: 0;
         background: #fff;
         @include box-shadow(0 0 4px rgba(0,0,0,.4));
     }

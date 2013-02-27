@@ -64,6 +64,8 @@
         }
     }
 }
+// Catalog
+
 .catalog {
     font-size: 11px;
     font-family: Arial;
@@ -76,9 +78,18 @@
     }
 }
 .catalog-col {
-    width: 380px;
+    width: 45%;
     float: left;
-    margin-right: 20px;
+    margin-right: 5%;
+    font-size: 11px;
+    font-family: Arial;
+    color: #8a8a8a;
+    a {
+        font-size: 12px;
+    }
+    p {
+        margin: 4px 0 12px;
+    }
     li {
         margin-bottom: 4px;
     }
@@ -95,6 +106,112 @@
         }
     }
 }
+.catalog-item {
+    padding-right: 5px;
+    h3 {
+        font-size: 18px;
+    }
+}
+.place {
+    float: left;
+    width: 55%;
+}
+.place__map {
+    margin: 17px 0;
+}
+.gallery {
+    float: right;
+    width: 42%;
+}
+.place-descr {
+    margin-bottom: 15px;
+    color: #8c8c8c;
+}
+.gallery-photos {
+    li {
+        display: inline-block;
+        margin: 0 17px 15px 0;
+    }
+    img {
+        display: block;
+    }
+}
+.galler__more {
+    margin: 15px 10px 15px 0;
+    padding: 15px 0;
+    border-top: 1px solid #f0f0e7;
+    border-bottom: 1px solid #f0f0e7;
+    li {
+        margin-bottom: 6px;
+    }
+    a {
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+.gallery__meta {
+    margin: 15px 0;
+    color: #848484;
+    font-size: 11px;
+    li {
+        margin-bottom: 6px;
+    }
+}
+.catalog-wrap {
+    clear: both;
+    border-top: 1px solid #bebe98;
+}
+.comment-counter {
+    display: block;
+    margin: 30px 0 22px;
+    font-size: 12px;
+    color: #50739c;
+    cursor: pointer;
+    i {
+        display: inline-block;
+        margin-left: 10px;
+        @include sized-sprite($icons, arr2);
+        vertical-align: middle;
+    }
+}
+.comment {
+    display: none;
+    padding-bottom: 10px;
+    li {
+        padding: 16px 0 10px;
+        border-top: 1px solid #bebe98;
+        overflow: hidden;
+    }
+}
+.comment__user {
+    float: left;
+    margin-right: 12px;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    img {
+        display: block;
+    }
+}
+.comment__body {
+    overflow: hidden;
+    font-size: 13px;
+}
+.comment__meta {
+    display: block;
+    margin-bottom: 6px;
+    color: #565656;
+    font-size: 11px;
+    span {
+        display: inline-block;
+        margin: 0 7px;
+    }
+    a {
+        color: #565656;
+        text-decoration: none;
+    }
+}
+
 
 // streets
 .letters {

@@ -91,6 +91,16 @@ $(document).ready(function() {
         $(this).parent().addClass("filter__extend-check");
     });
 
-
+// ---------------- show/hide comments  -------------------------- //
+    $(".js-commets").click(function(){
+        if ($(this).children().hasClass("js-active")) {
+            $(this).next().slideUp();
+            $(this).children().removeClass("js-active");
+        }
+        else {
+            $(this).children().addClass("js-active");
+            $(this).next().slideDown();
+        }
+    });
 
 });

@@ -1,0 +1,676 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Catalog item</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+<div class="l-layout">
+    <header class="header">
+        <div class="header__wrap">
+            <h1 class="logo">
+                <a href="#"></a>
+            </h1>
+            <div class="nav-wrap">
+                <div class="lang">
+                    <a href="#" class="active">Рус</a>
+                    <a href="#">Укр</a>
+                    <a href="#">Eng</a>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Карта</a></li>
+                        <li class="active"><a href="#">Каталог</a></li>
+                        <li><a href="#">Улицы</a></li>
+                        <li><a href="#">О проекте</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="rss"></a>
+            </div>
+            <div class="header__search">
+                <div class="search">
+                    <form>
+                        <input type="text"class="search__text js-input" placeholder="Улица, объект">
+                        <input type="submit"class="search__submit">
+                        <ul class="drop-list">
+                            <li><span><b>Андре</b>евская</span> <i>2 точки</i></li>
+                            <li><span><b>Андре</b>евский спуск</span> <i>45 точек</i></li>
+                            <li><span><b>Андре</b>я Первозванного площадь</span> <i>7 точек</i></li>
+                            <li><span><b>Андре</b>евская церковь</span> <i></i></li>
+                        </ul>
+                    </form>
+                </div>
+                <a href="#" class="logo-map"></a>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </header>
+    <div class="main">
+        <aside class="sidebar">
+            <h1 class="sidebar__title">Категории <i></i></h1>
+            <ul class="filter scroll-pane">
+                <li>
+                    <span class="filter__more"><i></i></span>
+                    <label for="check1">
+                        <input class="check-all" type="checkbox" id="check1">Исторические имена
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check11">Улицы
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check12">Исторические имена
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check13">Исторические имена
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="filter__more"><i></i></span>
+                    <label for="check2">
+                        <input class="check-all" type="checkbox" id="check2">Памятники
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check21">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check22">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check23">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="icon-park"></i>
+                    <label for="check3">
+                        <input type="checkbox" id="check3">Парки
+                    </label>
+                </li>
+                <li>
+                    <span class="filter__more"><i></i></span>
+                    <label for="check4">
+                        <input class="check-all" type="checkbox" id="check4">Храмы
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check41">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check42">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check43">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="icon-bridge"></i>
+                    <label for="check5">
+                        <input type="checkbox" id="check5">Мосты
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-gallery"></i>
+                    <label for="check6">
+                        <input type="checkbox" id="check6">Галереи
+                    </label>
+                </li>
+                <li>
+                    <span class="filter__more"><i></i></span>
+                    <label for="check7">
+                        <input class="check-all" type="checkbox" id="check7">Музейные комплексы
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check71">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check72">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check73">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="icon-place"></i>
+                    <label for="check18">
+                        <input type="checkbox" id="check18">Достопримечательности
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-palace"></i>
+                    <label for="check9">
+                        <input type="checkbox" id="check9">Особняки
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-fountain"></i>
+                    <label for="check10">
+                        <input type="checkbox" id="check10">Фонтаны
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-secret"></i>
+                    <label for="check11">
+                        <input type="checkbox" id="check11">Секретный Киев
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-hotel"></i>
+                    <label for="check12">
+                        <input type="checkbox" id="check12">Гостиницы
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-trees"></i>
+                    <label for="check13">
+                        <input type="checkbox" id="check13">Старые деревья
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-trees"></i>
+                    <label for="check14">
+                        <input type="checkbox" id="check14">Национальные адреса
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check141">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check142">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check143">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="icon-clock"></i>
+                    <label for="check15">
+                        <input type="checkbox" id="check15">Часы Города
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-famous"></i>
+                    <label for="check16">
+                        <input type="checkbox" id="check16">Дом с именем
+                    </label>
+                 </li>
+                <li>
+                    <label for="check17">
+                        <input type="checkbox" id="check17">Скульптура
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check171">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check172">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check173">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="check18">
+                        <input type="checkbox" id="check18">Развлечения
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check181">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check182">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check183">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="check19">
+                        <input type="checkbox" id="check19">Некрополь
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check191">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check192">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check193">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="check20">
+                        <input type="checkbox" id="check20">Мемориальные доски (МД)
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check201">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check202">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check203">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="check21">
+                        <input type="checkbox" id="check21">Архитектура
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check211">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check212">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check213">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="check22">
+                        <input type="checkbox" id="check22">Доходные дома
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check221">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check222">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check223">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="check23">
+                        <input type="checkbox" id="check23">Карты и схемы
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check231">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check232">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check233">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="check24">
+                        <input type="checkbox" id="check24">Образование
+                    </label>
+                    <ul>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check11">
+                                <input type="checkbox" id="check241">Var1
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-square"></i>
+                            <label for="check12">
+                                <input type="checkbox" id="check242">Var2
+                            </label>
+                        </li>
+                        <li>
+                            <i class="icon-street"></i>
+                            <label for="check13">
+                                <input type="checkbox" id="check243">Var3
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="icon-embassy"></i>
+                    <label for="check25">
+                        <input type="checkbox" id="check25">Посольства
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-lib"></i>
+                    <label for="check26">
+                        <input type="checkbox" id="check26">Библиотеки
+                    </label>
+                </li>
+                <li>
+                    <i class="icon-med"></i>
+                    <label for="check27">
+                        <input type="checkbox" id="check27">Медицина
+                    </label>
+                </li>
+            </ul>
+        </aside>
+        <div class="content catalog-item">
+            <h1>Свято-Введенский мужской монастырь</h1>
+            <div class="place">
+                <div class="place-descr">
+                    Печерск, ул. Московская, 42<br>
+                    Время работы: без выходных. Храм открыт с 8:00 до 20:00.
+                </div>
+                <p><b>Святыни</b></p>
+                <p>Чудотворная икона Божией Матери «Призри на смирение». Эта икона XIX в. – список с одноименной чудотворной псковской иконы 1420 г., празднование которой совершают 16 / 29 сентября. Во Введенский храм икону передала схимон. Феодора (†1994 г.), хранившая ее у себя 55 лет. 19 июля / 1 августа 1993 г. лик Богородицы с Богомладенцем чудесным образом отпечатался на стекле, прикрывавшем икону и не соприкасавшемся с ним.</p>
+                <p>Чтимые Тихвинская и Владимирская иконы Божией Матери.</p>
+                <p>Списки многих чудотворных икон Божией Матери и частицы мощей многих святых.</p>
+                <p>В нижнем храме – мощи основательницы обители монахини Димитры. В дни ее памяти совершается заупокойное богослужение.</p>
+                <div class="place__map">
+                    <iframe width="100%" height="177" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=&amp;aq=&amp;sll=49.510944,32.68158&amp;sspn=1.542599,4.22699&amp;ie=UTF8&amp;ll=50.431719,30.607309&amp;spn=0.011823,0.033023&amp;t=m&amp;z=16&amp;output=embed"></iframe>
+                </div> 
+                <div class="comments-wrap">
+                    <span class="comment-counter js-commets">12 комментариев <i></i></span>
+                    <ul class="comment">
+                        <li>
+                            <a href="#" class="comment__user">
+                                <img src="http://placehold.it/36x36" alt="">
+                            </a>
+                            <div class="comment__body">
+                                <span class="comment__meta"><a href="#">Пилип Духлій</a><span>•</span>12.01.2013 13:02</span>
+                                <p>Основан только на их вере в то, что CLV окажется меньше затрат на маркетинг" меньше? а не больше?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="comment__user">
+                                <img src="http://placehold.it/36x36" alt="">
+                            </a>
+                            <div class="comment__body">
+                                <span class="comment__meta"><a href="#">Пилип Духлій</a><span>•</span>12.01.2013 13:02</span>
+                                <p>Основан только на их вере в то, что CLV окажется меньше затрат на маркетинг" меньше? а не больше?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="comment__user">
+                                <img src="http://placehold.it/36x36" alt="">
+                            </a>
+                            <div class="comment__body">
+                                <span class="comment__meta"><a href="#">Пилип Духлій</a><span>•</span>12.01.2013 13:02</span>
+                                <p>Основан только на их вере в то, что CLV окажется меньше затрат на маркетинг" меньше? а не больше?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="comment__user">
+                                <img src="http://placehold.it/36x36" alt="">
+                            </a>
+                            <div class="comment__body">
+                                 <textarea class="input textarea" placeholder="Написать комментарий..."></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+            <div class="gallery">
+                <ul class="gallery-photos">
+                    <li><a href="#"><img src="http://placehold.it/100x100" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/100x100" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/100x100" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/100x100" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/100x100" alt=""></a></li>
+                </ul>
+                <ul class="galler__more">
+                    <li><a href="#">Подробнее на Интересном Киеве</a></li>
+                    <li><a href="#">Экскурсия</a></li>
+                </ul>
+                <ul class="gallery__meta">
+                    <li>Добавил: funsize</li>
+                    <li>Фото: Konstabtin Kolin</li>
+                </ul>
+            </div>
+            <div class="catalog-wrap">
+                <h2>Другие места этого раздела</h2>
+                <ul class="catalog-col">
+                    <li>
+                        <a href="#">Благовещенский мужской монастырь в Бортничах</a>
+                        <p>Промышленный переулок (Бортничи)</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Благовещенский собор</a>
+                       <p> Победы проспект</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Введенский обыденный храм</a>
+                        <p>Глушкова академика проспект</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Владимиро-Лыбедская церковь</a>
+                        <p>Антоновича (Горького)</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Деревянный храм Всех Святых комплекса Кафедрального собора Воскресения Христова</a>
+                        <p>Железнодорожное шоссе</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Китаевская пустынь</a>
+                        <p>Китаевская</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Крестовоздвиженская церковь</a>
+                        <p>Воздвиженская</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Мостицкая Покровская церьковь</a>
+                        <p>Мостицкий переулок</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Николаевский собор Покровского женского монастыря</a>
+                        <p>Бехтеревский переулок</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Николо-Иорданская церковь возрожденная</a>
+                        <p>Фрунзе Михаила</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Новомучеников и Исповедников Русских</a>
+                        <p>Дорогожицкая</p>
+                    </li>
+                </ul>
+                <ul class="catalog-col">
+                    <li>
+                        <a href="#">Благовещенский мужской монастырь в Бортничах</a>
+                        <p>Промышленный переулок (Бортничи)</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Благовещенский собор</a>
+                       <p> Победы проспект</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Введенский обыденный храм</a>
+                        <p>Глушкова академика проспект</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Владимиро-Лыбедская церковь</a>
+                        <p>Антоновича (Горького)</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Деревянный храм Всех Святых комплекса Кафедрального собора Воскресения Христова</a>
+                        <p>Железнодорожное шоссе</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Китаевская пустынь</a>
+                        <p>Китаевская</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Крестовоздвиженская церковь</a>
+                        <p>Воздвиженская</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Мостицкая Покровская церьковь</a>
+                        <p>Мостицкий переулок</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Николаевский собор Покровского женского монастыря</a>
+                        <p>Бехтеревский переулок</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Николо-Иорданская церковь возрожденная</a>
+                        <p>Фрунзе Михаила</p>
+                    </li>
+
+                    <li>
+                        <a href="#">Новомучеников и Исповедников Русских</a>
+                        <p>Дорогожицкая</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer class="footer">
+    <div class="copy">
+        © 2009-2013 Все материалы добавлены энтузиастоами сообщества <a href="#" class="">Интересный Киев</a>
+    </div>
+    <div class="support">При поддержке <a href="#">Google Украина</a></div>
+</footer>
+</body>
+</html>
