@@ -25,8 +25,8 @@ $(document).ready(function() {
         api_scroll.reinitialise();
     });
 
-    $(".sidebar__title").children().addClass("active");
-    $(".sidebar__title").click(function(){
+    $(".js-title").children().addClass("active");
+    $(".js-title").click(function(){
         if ($(this).children().hasClass("active")) {
             $(this).next().slideUp();
             $(this).children().removeClass("active");
@@ -148,7 +148,6 @@ $(document).ready(function() {
             animateTo: true
         });
     }
-
     mapResize();
     sidebarResize();
     sidebarResizeInd();
