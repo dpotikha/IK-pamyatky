@@ -15,7 +15,15 @@ $(document).ready(function() {
     });
 
 // ---------------- Filter -------------------------- //
-    $('.scroll-pane').jScrollPane();
+    $('.scroll-pane').jScrollPane({
+        autoReinitialise: true,
+        hideFocus: true,
+        animateTo: true
+    });
+    var api_scroll = $('.scroll-pane').data('jsp');
+    $(".filter_inner li div").live("click", function(){
+        api_scroll.reinitialise();
+    });
 
     $(".sidebar__title").children().addClass("active");
     $(".sidebar__title").click(function(){
@@ -87,6 +95,20 @@ $(document).ready(function() {
         }
     });
 
+    $(".filter li ul input").change(function(){
+        var check_all = $(this).parent().parent().parent().parent().children("label").children(".check-all");
+        if ($(this).hasClass("js-checked")) {
+            $(this).removeClass("js-checked");
+            $(this).removeAttr("checked");
+            check_all.removeClass("js-active");
+            check_all.removeAttr("checked");
+        }
+        else {
+            $(this).addClass("js-checked");
+            $(this).attr("checked", "checked");
+        }
+    });
+
     $(".filter li ul").each(function(){
         $(this).parent().addClass("filter__extend-check");
     });
@@ -102,5 +124,45 @@ $(document).ready(function() {
             $(this).next().slideDown();
         }
     });
+
+// ---------------- Map size/resize  -------------------------- //
+    function mapResize() {
+        var map_height = $(window).height();
+        $(".js-map iframe").height(map_height);
+    }
+    function sidebarResize() {
+        var height = $(window).height() - 244;
+        $(".js-sidebar .scroll-pane").height(height);
+        $('.scroll-pane').jScrollPane({
+            autoReinitialise: true,
+            hideFocus: true,
+            animateTo: true
+        });
+    }
+    function sidebarResizeInd() {
+        var height = $(window).height() - 170;
+        $(".js-sidebar-ind .scroll-pane").height(height);
+        $('.scroll-pane').jScrollPane({
+            autoReinitialise: true,
+            hideFocus: true,
+            animateTo: true
+        });
+    }
+
+    mapResize();
+    sidebarResize();
+    sidebarResizeInd();
+    $(window).resize(function(){
+        mapResize();
+        sidebarResize();
+        sidebarResizeInd();
+    });
+
+
+
+
+
+
+// ---------------- sidebar(index) size/resize -------------------------- //
 
 });

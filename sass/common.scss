@@ -68,7 +68,6 @@ a{
 }
 .l-layout {
     margin: 0 auto -76px;
-    position: relative;
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -123,7 +122,7 @@ a{
         text-decoration: none;
         border-bottom: 2px solid #d8dee6;
         &:hover {
-            border-bottom: 0;
+            border-bottom: 2px solid transparent;
         }
     }
     .active {
@@ -232,13 +231,15 @@ a{
 }
 
 .sidebar__title {
+    position: relative;
     padding-bottom: 8px;
     font-size: 24px;
     font-weight: normal;
     cursor: pointer;
     i {
-        float: right;
-        margin-top: 6px;
+        position: absolute;
+        top: 6px;
+        right: 0;
         @include sized-sprite($icons, plus);
     }
     .active {
@@ -336,7 +337,6 @@ a{
 .scroll-pane {
     overflow: auto; 
     outline: none;
-    height: 600px;
 }
 
 /* --------------------------------------- //END sidebar ---------------------------------------- */

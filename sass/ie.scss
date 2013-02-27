@@ -6,7 +6,33 @@
 // ie7
 
 *+ html {
-
+    .sidebar__title {
+        height: 31px;
+    }
+    .search__text {
+        line-height: 33px;
+    }
+    .search__submit {
+        right: 13px;
+    }
+    .textarea {
+        min-width: 400px;
+        width: auto;
+    }
+    .lang a,
+    .nav li,
+    .rss,
+    .search, 
+    .logo-map,
+    .filter i,
+    .filter__more,
+    .comment-counter i,
+    .comment__meta span,
+    .gallery-photos li,
+    
+    {
+        display: inline;
+    }
 }
 
 // ie6

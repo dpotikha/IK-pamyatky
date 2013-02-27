@@ -46,7 +46,7 @@ body { padding: 0 10px; color: #000; font-weight: normal; font-style: normal; fo
 a { color: #355e8d; }
 a:hover { text-decoration: none; border-bottom: 0; }
 
-.l-layout { margin: 0 auto -76px; position: relative; min-height: 100%; height: auto !important; height: 100%; background: #fff; }
+.l-layout { margin: 0 auto -76px; min-height: 100%; height: auto !important; height: 100%; background: #fff; }
 
 .push { clear: both; height: 76px; }
 
@@ -67,7 +67,7 @@ a:hover { text-decoration: none; border-bottom: 0; }
 
 .lang { margin-bottom: 11px; color: #FFF; font-size: 11px; }
 .lang a { display: inline-block; margin-right: 16px; font-weight: normal; font-style: normal; font-family: 'open_sansregular', Arial, sans-serif; text-decoration: none; border-bottom: 2px solid #d8dee6; }
-.lang a:hover { border-bottom: 0; }
+.lang a:hover { border-bottom: 2px solid transparent; }
 .lang .active { color: #7d7d7d; border-bottom: 0; }
 
 .nav { display: inline-block; }
@@ -100,8 +100,8 @@ a:hover { text-decoration: none; border-bottom: 0; }
 /* ----------------------------------------- sidebar -------------------------------------------- */
 .sidebar { float: left; margin-top: 6px; padding: 10px 7px 7px 11px; width: 261px; }
 
-.sidebar__title { padding-bottom: 8px; font-size: 24px; font-weight: normal; cursor: pointer; }
-.sidebar__title i { float: right; margin-top: 6px; background: url('../img/icons-s809d785ad0.png') 0 -633px no-repeat; width: 21px; height: 21px; }
+.sidebar__title { position: relative; padding-bottom: 8px; font-size: 24px; font-weight: normal; cursor: pointer; }
+.sidebar__title i { position: absolute; top: 6px; right: 0; background: url('../img/icons-s809d785ad0.png') 0 -633px no-repeat; width: 21px; height: 21px; }
 .sidebar__title .active { background: url('../img/icons-s809d785ad0.png') 0 -664px no-repeat; width: 21px; height: 21px; }
 
 .filter { font: normal 12px Arial; }
@@ -153,7 +153,7 @@ a:hover { text-decoration: none; border-bottom: 0; }
 
 .icon-med { background: url('../img/icons-s809d785ad0.png') 0 -171px no-repeat; width: 16px; height: 15px; }
 
-.scroll-pane { overflow: auto; outline: none; height: 600px; }
+.scroll-pane { overflow: auto; outline: none; }
 
 /* --------------------------------------- //END sidebar ---------------------------------------- */
 /* ------------------------------------- Independent blocks -------------------------------------- */
