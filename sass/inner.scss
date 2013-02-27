@@ -95,3 +95,47 @@
         }
     }
 }
+
+// streets
+.letters {
+    overflow: hidden;
+    margin: 0 0 36px -15px;
+    li {
+        float: left;
+        margin-right: 2px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        @include osr;
+        font-size: 18px;
+        color: #767676;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+            color: #000;
+        }
+    }
+    .active {
+        color: #000;
+        background: #e7e7e7;
+    }
+}
+.catalog-street {
+    overflow: hidden;
+    ul {
+        float: left;
+        margin-left: 2.5%;
+        width: 23%;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    li {
+        margin-bottom: 15px;
+    }
+    a {
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
