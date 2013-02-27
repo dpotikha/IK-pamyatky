@@ -61,6 +61,16 @@ $(document).ready(function() {
         }
     });
 
+    $(".filter_street li").click(function(){
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+        }
+        else {
+            $(".filter_street li").removeClass("active");
+            $(this).addClass("active");
+        }
+    });
+
     $(".check-all").change(function(){
         var check = $(this).parent().parent().children("ul").children("li").children("label").children("input");
         if ($(this).hasClass("js-active")) {

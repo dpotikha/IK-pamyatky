@@ -139,3 +139,48 @@
         text-decoration: none;
     }
 }
+
+.filter_street {
+    height: 750px;
+    li {
+        padding: 7px 0 7px 25px;
+    }
+    .active {
+        position: relative;
+        background: #e7e7e7;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 11px;
+            top: 50%;
+            margin-top: -5px;
+            @include sized-sprite($icons, arr);
+        }
+        i {
+            @extend %gray;
+        }
+    }
+}
+.street {
+    h2 {
+        margin-bottom: 6px;
+    }
+    ul {
+        margin-bottom: 36px;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+    a {
+        text-decoration: none;
+    }
+} 
+.street__left {
+    margin-right: 10%;
+    width: 55%;
+    float: left;
+}
+.street__right {
+    width: 30%;
+    float: left;
+}

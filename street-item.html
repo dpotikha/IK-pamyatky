@@ -1,0 +1,160 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Street item</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+<div class="l-layout">
+    <header class="header">
+        <div class="header__wrap">
+            <h1 class="logo">
+                <a href="#"></a>
+            </h1>
+            <div class="nav-wrap">
+                <div class="lang">
+                    <a href="#" class="active">Рус</a>
+                    <a href="#">Укр</a>
+                    <a href="#">Eng</a>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Карта</a></li>
+                        <li class="active"><a href="#">Каталог</a></li>
+                        <li><a href="#">Улицы</a></li>
+                        <li><a href="#">О проекте</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="rss"></a>
+            </div>
+            <div class="header__search">
+                <div class="search">
+                    <form>
+                        <input type="text"class="search__text js-input" placeholder="Улица, объект">
+                        <input type="submit"class="search__submit">
+                        <ul class="drop-list">
+                            <li><span><b>Андре</b>евская</span> <i>2 точки</i></li>
+                            <li><span><b>Андре</b>евский спуск</span> <i>45 точек</i></li>
+                            <li><span><b>Андре</b>я Первозванного площадь</span> <i>7 точек</i></li>
+                            <li><span><b>Андре</b>евская церковь</span> <i></i></li>
+                        </ul>
+                    </form>
+                </div>
+                <a href="#" class="logo-map"></a>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </header>
+    <div class="main">
+        <aside class="sidebar">
+            <h1 class="sidebar__title">Улицы <i></i></h1>
+            <ul class="filter scroll-pane filter_street">
+                <li>Алма-Атинская</li>
+                <li>Амосова Николая</li>
+                <li>Андреевская</li>
+                <li>Андреевский спуск</li>
+                <li>Андрея Первозванного площадь</li>
+                <li>Андрющенко Григория</li>
+                <li>Анищенко Александра</li>
+                <li>Анкары площадь</li>
+                <li>Антонова авиаконструктора</li>
+                <li>Антоновича (Горького)</li>
+                <li class="active">Арсенальная площадь</li>
+                <li>Артема ул. [Коцюбинское]</li>
+                <li>Артёма Федора</li>
+                <li>Аскольдов переулок</li>
+                <li>Ахматовой Анны</li>
+                <li>Бабушкина Ивана</li>
+                <li>Багговутовская</li>
+                <li>Бажана Николая проспект</li>
+                <li>Бажова Павла</li>
+                <li>Байковая</li>
+                <li>Бальзака Оноре</li>
+                <li>Банковая</li>
+                <li>Барбюса Анри</li>
+                <li>Баренбойма Исаака</li>
+                <li>Бассейная</li>
+                <li>Байковая</li>
+                <li>Бальзака Оноре</li>
+                <li>Банковая</li>
+                <li>Барбюса Анри</li>
+                <li>Баренбойма Исаака</li>
+                <li>Бассейная</li>
+                <li>Байковая</li>
+                <li>Бальзака Оноре</li>
+                <li>Банковая</li>
+                <li>Барбюса Анри</li>
+                <li>Баренбойма Исаака</li>
+                <li>Бассейная</li>
+            </ul>
+        </aside>
+        <div class="content street">
+            <h1>Украинская Православная Церковь МП</h1>
+            <div class="street__left">
+                <h2>МД - Охрана памятников</h2>
+                <ul>
+                    <li><a href="#">Памятник архитектуры - Станция "Арсенальная"</a></li>
+                </ul>
+                <h2>Памятники прочие</h2>
+                <ul>
+                    <li><a href="#">Памятник рабочим завода "Арсенал"</a></li>
+                </ul>
+                <h2>Памятники прочие</h2>
+                <ul>
+                    <li><a href="#">Памятник Искре И. И. и Кочубею В. Л.</a></li>
+                    <li><a href="#">Памятник Свердлову Я. М.</a></li>
+                    <li><a href="#">Памятник Мазепе И. С.</a></li>
+                </ul>
+                <h2>МД - Личности</h2>
+                <ul>
+                    <li><a href="#">Мстислав (Патриарх)</a></li>
+                    <li><a href="#">Булгаков Михаил Афанасьевич</a></li>
+                    <li><a href="#">Дядченко Григорий Кононович</a></li>
+                    <li><a href="#">Тютюнник Григорий Михайлович</a></li>
+                </ul>
+            </div>
+            <div class="street__right">
+                <h2>Галереи</h2>
+                <ul>
+                    <li><a href="#">Estamp</a></li>
+                    <li><a href="#">L-Art Classic</a></li>
+                    <li><a href="#">White Gallery</a></li>
+                    <li><a href="#">Андреевская церковь</a></li>
+                    <li><a href="#">Андреевский спуск-3</a></li>
+                    <li><a href="#">Антикварный магазин-галерея</a></li>
+                    <li><a href="#">Арт-фокстрот</a></li>
+                    <li><a href="#">Ателье Карась</a></li>
+                    <li><a href="#">Выставка-продажа</a></li>
+                    <li><a href="#">Галерея 36</a></li>
+                    <li><a href="#">Галерея Арт-Блюз</a></li>
+                    <li><a href="#">Гончары</a></li>
+                    <li><a href="#">Древний Киев</a></li>
+                    <li><a href="#">Галерея Крона</a></li>
+                    <li><a href="#">Галерея МИХТ</a></li>
+                    <li><a href="#">Подол-фортуна</a></li>
+                    <li><a href="#">Галерея Тадзио</a></li>
+                    <li><a href="#">Галерея Триптих</a></li>
+                </ul>   
+            </div>
+
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer class="footer">
+    <div class="copy">
+        © 2009-2013 Все материалы добавлены энтузиастоами сообщества <a href="#" class="">Интересный Киев</a>
+    </div>
+    <div class="support">При поддержке <a href="#">Google Украина</a></div>
+</footer>
+</body>
+</html>
