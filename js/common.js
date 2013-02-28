@@ -8,11 +8,11 @@ $(document).ready(function() {
     $(".js-input").focusout(function(){
         $(this).next().next().fadeOut("fast");
     });
-    // get text
-    $(".drop-list li").click(function(){
-        var text = $(this).children("span").text();
-        $(this).parent().prev().prev().val(text);
-    });
+    // // get text
+    // $(".drop-list li").click(function(){
+    //     var text = $(this).children("span").text();
+    //     $(this).parent().prev().prev().val(text);
+    // });
 
 // ---------------- Filter -------------------------- //
     $('.scroll-pane').jScrollPane({

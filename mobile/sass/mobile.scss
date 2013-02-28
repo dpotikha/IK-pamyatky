@@ -46,6 +46,7 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
+    min-width: 480px;
     color: #000;
     @include osl;
     font-size: 14px;
@@ -54,9 +55,6 @@ body{
 }
 a{
     color: #355e8d;
-    &:hover{ 
-        border-bottom: 0;
-    } 
 }
 .wrapper {
     overflow: hidden;
@@ -65,20 +63,553 @@ a{
     @extend %clr;
 }
 .l-layout {
-
+    position: relative;
+    z-index: 1000;
+    background: #fff;
+    padding: 0;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: 0;
+}
+.push {
+    clear: both;
+    height: 0;
+}
+.index {
+    .l-layout {
+        background: none;
+        position: static;
+    }  
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
     position: relative;
-    margin: 13px 10px;
-    height: 56px;
-    background: #fff;
-    @include box-sizing(border-box);
-    z-index: 1000;
+    z-index: 2000;
+    padding-top: 13px;
 } 
+.header__wrap {
+    margin: 0 10px;
+    height: 56px;
+    line-height: 56px;
+    background: #fff;
+    @extend %clr;
+    @include box-sizing(border-box);
+    @include box-shadow(0 0 17px rgba(0,0,0,.6));
+}
+.header__title {
+    padding-left: 1%;
+    float: left;
+    width: 52%;
+    @include osl;
+    font-size: 22px;
+    color: #b23622;
+    @include box-sizing(border-box);
+    text-transform: uppercase;
+}
+.location,
+.search,
+.nav,
+.lang {
+    float: left;
+    width: 12%;
+    height: 56px;
+    text-align: center;
+    border-left: 1px solid #939393;
+    @include box-sizing(border-box);
+    i {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.location {
+    border: 0;
+    i {
+        @include sized-sprite($icons, gps);
+    }
+}
+
+.search {
+    i {
+        @include sized-sprite($icons, glass);
+    }
+}
+.search__wrap {
+    display: none;
+}
+.search_active {
+    padding: 2px 7px 0;
+    position: relative;
+    width: 76%;
+    i {
+        display: none;
+    }
+    .search__wrap {
+        display: block;
+    }
+}
+.search__text {
+    padding: 0 44px 0 10px;
+    height: 43px;
+    width: 100%;
+    color: #4e4e4e;
+    font-size: 20px;
+    font-family: Arial;
+    border: 1px solid #bebfbf;
+    @include box-sizing(border-box);
+}
+.search__submit {
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    @include sized-sprite($icons, glass-gray);
+    @extend %hide-text;
+}
+
+.search__list {
+    //display: none;
+    position: absolute;
+    top: 49px;
+    left: 7px;
+    padding: 12px 10px;
+    width: 420px;
+    border: 1px solid #aaabab;
+    font-size: 14px;
+    background: #fff;
+    text-align: left;
+    line-height: 1.5;
+    @include box-sizing(border-box);
+    li { 
+        margin-bottom: 10px;
+    }
+    span {
+        font: normal 11px Arial;
+        color: #606060;
+    }
+    strong {
+        color: #c20e16;
+        font-weight: normal;
+    }
+}
+
+.nav {
+    i {
+        position: relative;
+        @include sized-sprite($icons, nav); 
+    }
+    .drop-list {
+        width: 425px;
+        right: -58px;
+    } 
+    li {
+        &:after {
+            top: 50%;
+            margin-top: -10px;
+            @include sized-sprite($icons, arr); 
+        }
+    }
+}
+.lang { 
+    i {
+        position: relative;
+    }
+    .ua-act {
+        @include sized-sprite($icons, ua);
+    }
+    .rus-act-act {
+        @include sized-sprite($icons, rus);
+    }
+    .eng-act-act {
+        @include sized-sprite($icons, eng);
+    }
+    .drop-list {
+        display: none;
+        width: 208px;
+        right: -12px;
+        &:before {
+            top: -16px;
+            right: 10px;
+            @include sized-sprite($icons, corner);
+        }
+    }
+    li {
+        &:after {
+            top: 50%;
+            margin-top: -10px;
+        }
+    }
+    .ua {
+        &:after {
+            @include sized-sprite($icons, ua);
+        }
+    }
+    .rus {
+        &:after {
+            @include sized-sprite($icons, rus);
+        }
+    }
+    .eng {
+        &:after {
+            @include sized-sprite($icons, eng);
+        }
+    }
+}
+.lang_active {
+    @include background-image(linear-gradient(#ec624e, #841d0d));
+}
+    
+
 /* -------------------------------------- END Header --------------------------------------------- */
+
+/* ------------------------------------------ Blocks --------------------------------------------- */
+.drop-list {
+    display: none;
+    position: absolute;
+    top: 59px;
+    z-index: 2000;
+    background: #fff; 
+    @include box-sizing(border-box);
+    @include box-shadow(0 0 15px rgba(0,0,0,.6));
+    &:before {
+        content: ""; 
+        position: absolute;
+        top: -16px;
+        right: 51px;
+        @include sized-sprite($icons, corner); 
+    }
+    li {
+        position: relative;
+        padding-left: 20px;
+        text-align: left;
+        height: 47px;
+        line-height: 47px;
+        color: #ce422d;
+        font-size: 14px;
+        border-top: 1px solid #939393;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.75);
+        font-style: normal;
+        &:first-child {
+            border: 0;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            right: 15px;
+        }
+        i {
+            float: right; 
+            margin-top: 14px;
+        }
+    }
+    a {
+        color: #ce422d;
+        font-size: 18px;
+        text-decoration: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.75);
+    }
+} 
+
+// main block styles
+.main {
+    position: relative;
+    z-index: 1000;
+    padding: 22px 25px;
+}
+.title-l-1 {
+    padding-bottom: 8px;
+    font-size: 30px;
+}
+.title-l-2 {
+    padding: 0 0 8px 40px;
+    font-size: 24px;
+    line-height: 1.1;   
+}
+.title-l-1,
+.title-l-2 {
+    position: relative;
+    @include osl;
+    color: #797979;
+    border-bottom: 1px solid #000;
+    .prev {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        @include sized-sprite($icons, arr2);
+    }
+    .close {
+        position: absolute;
+        right: 15px;
+        top: -4px;
+    }
+}
+.catalog {
+    li {
+        position: relative;
+        line-height: 49px;
+        color: #303030;
+        font-size: 16px;
+        cursor: pointer;
+        border-bottom: 1px solid #d3d2d2;
+    }
+    a {
+        display: block;
+        color: #303030;
+        text-decoration: none;
+    }
+    .extend {
+        font-weight: bold;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 15px;
+            top: 0;
+            margin-top: 15px;
+            @include sized-sprite($icons, plus);
+        }
+    }
+    .extend_active {
+        &:after {
+            margin-top: 24px;
+            @include sized-sprite($icons, minus);
+        }
+    }
+    ul {
+        display: none;
+        margin-bottom: -1px;
+        li {
+            height: 49px;
+            padding: 0 5px 0 29px;
+            font-weight: normal;
+            background: #f5f4f4;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                margin-top: -10px;
+                @include sized-sprite($icons, arr);
+            }
+        }
+    }
+}
+
+.catalog-place {
+    li {
+        padding: 17px 0;
+        border-bottom: 1px solid #d1d1d1;
+    }
+    a {
+        position: relative;
+        display: block;
+        color: #8a8a8a;
+        text-decoration: none;
+        font-size: 12px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -10px;
+            @include sized-sprite($icons, arr);
+        }
+    }
+    strong{
+        display: block;
+        margin-bottom: 2px;
+        color: #3e3e3e;
+        font-size: 16px;    
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 90%;
+        overflow: hidden;  
+    }
+}
+.close {
+    display: inline-block;
+    cursor: pointer;
+    @include sized-sprite($icons, close);
+}
+
+.place {
+    position: relative;
+    z-index: 1000;
+    background: #fff;
+    padding: 25px 10px 0;
+    margin: 10px;
+    .img {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+        background: #fff;
+        ul {
+            position: absolute;
+            bottom: 6px;
+            left: 49px;
+            @extend %clr;
+            background: #fff;
+        }
+        li {
+            position: relative;
+            float: left;
+            height: 47px;
+            line-height: 47px;
+            border-right: 1px solid #ababab;
+            &:last-child {
+                border: 0;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 11px;
+                margin-top: -10px;
+                @include sized-sprite($icons, arr);
+            }
+            a {
+                display: block;
+                padding: 0 48px 0 15px;
+                font-size: 16px;
+                color: #b23622;
+                text-decoration: none;
+            }
+        }
+    }
+    .title-l-2 {
+        padding: 0 60px 17px;
+        border: 0;
+        a {
+            left: 15px;
+        }
+    }
+}
+.content {
+    padding: 10px 20px 20px;
+    font: normal 14px Arial, sans-serif;
+    line-height: 1.4;
+    border-bottom: 3px solid #b23622;
+}
+
+.catalog-street {
+    .title-l-1 {
+        padding-left: 27px;
+        .prev {
+            top: 7px;
+            right: 0;
+        }
+    }
+}
+
+.title-l-1_letters {
+    border-bottom: 0;
+}
+.letters {
+    @extend %clr;
+    border-top: 1px solid #545454;
+    li {
+        float: left;
+        margin-right: -1px;
+        width: 87px;
+        height: 85px;
+        line-height: 85px;
+        text-align: center;
+        @include box-sizing(border-box);
+        border: 1px solid #dbdbdb;
+        border-top: 0;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        font-size: 36px;
+        @include osl;
+        text-transform: uppercase;
+        color: #303030;
+    }
+}
+
+.about {
+    position: absolute;
+    top: 93px;
+    margin: 0 10px;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 3px solid #0f2d00;
+    @include box-shadow(0 0 17px rgba(0,0,0,.6));
+    &:before {
+        content: ""; 
+        position: absolute;
+        top: -24px;
+        right: 0;
+        top: -16px;
+        right: 75px;
+        @include sized-sprite($icons, corner); 
+    }
+}
+.about__body {
+    padding: 20px;
+    font: normal 16px/1.4 Arial, sans-serif;
+}
+.about__footer {
+    padding: 10px 28px 40px;
+    background: #f7f7f7;
+}
+.support {
+    margin-bottom: 2px;
+    padding-bottom: 24px;
+    @extend %clr;
+    border-bottom: 1px solid #8e8e8e;
+    @include box-shadow(0 1px 0 #fff);
+}
+.support__title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+}
+.logo {
+    width: 124px;
+    height: 115px;
+    line-height: 112px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ccd5c7;
+    @include border-radius(5px);
+    i {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.logo_map {
+    float: left;
+    margin-left: 50px;
+    i {
+        @include sized-sprite($icons, logo-map);
+    }
+}
+.logo_ik {
+    float: right;
+    margin-right: 50px;
+    i {
+        @include sized-sprite($icons, logo);
+    }
+}
+.wifi {
+    text-align: center;
+    i, div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    strong {
+        display: block; 
+    }
+    i {
+        @include sized-sprite($icons, wifi);
+    }
+}
+
+// Map style
 .map {
     position: fixed;
     top: 0;
@@ -86,4 +617,7 @@ a{
     bottom: 0;
     left: 0;
 }
- 
+/* ---------------------------------------- END Blocks ------------------------------------------- */
+
+
+

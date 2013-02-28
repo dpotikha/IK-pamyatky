@@ -93,8 +93,8 @@ a:hover { border-bottom: 0; }
 
 .drop-list { display: none; position: absolute; z-index: 1000; top: 33px; left: 0; padding: 7px 10px 5px; width: 400px; border: 1px solid #aaabab; font-size: 14px; background: #fff; }
 .drop-list li { margin-bottom: 5px; cursor: pointer; }
-.drop-list i { font: normal 11px Arial; color: #606060; }
-.drop-list b { color: #c20e16; font-weight: normal; }
+.drop-list span { font: normal 11px Arial; color: #606060; }
+.drop-list strong { color: #c20e16; font-weight: normal; }
 
 .logo-map { display: inline-block; font-size: 11px; text-decoration: none; color: #555; font-family: Arial, sans-serif; background: url('../img/icons-s809d785ad0.png') 0 0 no-repeat; width: 66px; height: 64px; }
 
