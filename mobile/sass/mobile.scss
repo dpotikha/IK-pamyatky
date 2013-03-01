@@ -102,19 +102,22 @@ a{
 .header__title {
     padding-left: 1%;
     float: left;
-    width: 52%;
     @include osl;
     font-size: 22px;
     color: #b23622;
     @include box-sizing(border-box);
     text-transform: uppercase;
 }
+.header__nav {
+    float: right;
+    @extend %clr;
+}
 .location,
 .search,
 .nav,
 .lang {
     float: left;
-    width: 12%;
+    width: 55px;
     height: 56px;
     text-align: center;
     border-left: 1px solid #939393;
@@ -136,19 +139,17 @@ a{
         @include sized-sprite($icons, glass);
     }
 }
-.search__wrap {
+.search-form {
     display: none;
-}
-.search_active {
-    padding: 2px 7px 0;
     position: relative;
-    width: 76%;
-    i {
-        display: none;
-    }
-    .search__wrap {
-        display: block;
-    }
+    margin: 0 115px 0 5px;
+    padding-top: 2px;
+}
+.search-form_active {
+    display: block;
+}
+.hidden {
+    display: none;
 }
 .search__text {
     padding: 0 44px 0 10px;
@@ -159,6 +160,9 @@ a{
     font-family: Arial;
     border: 1px solid #bebfbf;
     @include box-sizing(border-box);
+    &:focus {
+        @include box-shadow(inset 0 0 5px rgba(186,186,186,.75));
+    }
 }
 .search__submit {
     position: absolute;
@@ -169,10 +173,9 @@ a{
 }
 
 .search__list {
-    //display: none;
     position: absolute;
     top: 49px;
-    left: 7px;
+    left: 0;
     padding: 12px 10px;
     width: 420px;
     border: 1px solid #aaabab;
