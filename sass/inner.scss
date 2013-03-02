@@ -154,8 +154,10 @@
     }
 }
 .catalog-wrap {
+    margin-bottom: 20px;
     clear: both;
     border-top: 1px solid #bebe98;
+    @extend %clr;
 }
 .comment-counter {
     display: block;
@@ -208,6 +210,22 @@
     }
 }
 
+.authoriz-link {
+    display: inline-block;
+    position: relative;
+    margin: 13px 0 0 42px;
+    height: 33px;
+    line-height: 33px;
+    color: #c83e2a;
+    font-size: 18px;
+    @include osl;
+    i {
+        position: absolute;
+        left: -42px;
+        top: 0;
+        @include sized-sprite($icons, g);
+    }
+}
 
 // streets
 .letters {
