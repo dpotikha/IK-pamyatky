@@ -159,6 +159,11 @@ $(document).ready(function() {
 
 
 
+// ---------------- Google tooltip  -------------------------- //
+    $('.tooltip__scroll').jScrollPane({
+        hideFocus: true,
+        animateTo: true
+    });
 
 
 

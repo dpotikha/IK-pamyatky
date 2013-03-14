@@ -374,7 +374,52 @@ a{
         display: inline-block;
     }
 }
-.buble
+
+.tooltip-wrap {
+    background: #fff;
+    border: 1px solid #ababab;
+}
+.tooltip {    
+    padding-top: 18px;
+    font: normal 13px Arial,sans-serif;
+    p {
+        margin-bottom: 15px;
+    }
+    img {
+        float: right;
+        margin: 0 10px 5px 5px;
+    }
+}
+.tooltip__main  {
+    width: 400px;
+    padding: 0 14px 0 18px;
+    color: #000;
+    border-bottom: 1px solid #f0f0e7;
+}
+.tooltip__scroll {
+    height: 170px;
+    padding-bottom: 20px;
+}
+.tooltip__title {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+.tooltip__meta {
+    padding-bottom: 9px;
+    span {
+        display: block;
+        color: #8d8d8d;
+    }
+}
+.tooltip__nav {
+    padding: 13px 0 16px;
+    text-align: center;
+    a {
+        display: inline-block;
+        margin: 0 7px;
+    }
+}
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
@@ -397,12 +442,3 @@ a{
     }
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
-// .test {
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 1196px;
-//     height: 750px;
-//     background: url(../img/test.png) 0 0 no-repeat;
-//     opacity: .7;
-// }
