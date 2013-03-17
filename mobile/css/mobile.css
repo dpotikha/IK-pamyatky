@@ -56,6 +56,7 @@ a { color: #355e8d; }
 .header__wrap { margin: 0 10px; height: 56px; line-height: 56px; background: #fff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); }
 
 .header__title { padding-left: 1%; float: left; font-weight: normal; font-style: normal; font-family: 'open_sanslight', Arial, sans-serif; font-size: 22px; color: #b23622; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-transform: uppercase; }
+@media only screen and (max-width: 520px) { .header__title { font-size: 18px; } }
 
 .header__nav { float: right; }
 

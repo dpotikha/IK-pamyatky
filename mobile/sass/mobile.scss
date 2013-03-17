@@ -1,5 +1,12 @@
 @import "base";
 /* ------------------------------------- Reset css -------------------------------------------- */
+@mixin iphone
+{
+  @media only screen and (max-width: 520px) 
+  {
+    @content;
+  }
+}
 /* ------------------------------------- Reset css -------------------------------------------- */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
 h6, p, blockquote, pre,a, abbr, acronym, address, big,
@@ -104,6 +111,9 @@ a{
     float: left;
     @include osl;
     font-size: 22px;
+    @include iphone(){
+        font-size: 18px;
+    }
     color: #b23622;
     @include box-sizing(border-box);
     text-transform: uppercase;

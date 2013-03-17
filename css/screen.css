@@ -107,15 +107,17 @@ a:hover { color: #b23622; }
 .sidebar__title .active { background: url('../img/icons-s012284cba5.png') 0 -726px no-repeat; width: 21px; height: 21px; }
 
 .filter { font: normal 12px Arial; }
-.filter li { margin-right: 6px; padding: 5px 0 5px; color: #555; cursor: pointer; font-size: 12px; border-top: 1px solid #e2e2e2; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+.filter li { margin-right: 6px; padding: 5px 0 5px; padding: 7px 0 3px; color: #555; cursor: pointer; font-size: 12px; border-top: 1px solid #e2e2e2; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 .filter li ul { display: none; padding-top: 8px; }
-.filter li li { margin: 0; border: 0; padding: 5px 0 5px 16px; }
+.filter li li { margin: 0; border: 0; padding: 5px 0 5px 16px; vertical-align: top; }
 .filter .active-state { font-size: 30px; }
 .filter input { margin-right: 9px; }
 .filter i { display: inline-block; margin-right: 4px; }
 .filter label { cursor: pointer; }
+.filter label span { display: inline-block; vertical-align: top; width: 80%; }
+.filter label input { vertical-align: top; }
 
-.filter__more { position: relative; display: inline-block; width: 11px; height: 11px; text-align: center; margin: 0 5px 0 4px; }
+.filter__more { position: relative; display: inline-block; width: 11px; height: 11px; height: 16px; text-align: center; margin: 0 5px 0 4px; }
 .filter__more i { position: absolute; left: 0; top: 0; margin: 0; background: url('../img/icons-s012284cba5.png') 0 -674px no-repeat; width: 11px; height: 11px; }
 
 .filter__more-act i { top: 5px; background: url('../img/icons-s012284cba5.png') 0 -792px no-repeat; width: 11px; height: 1px; }
@@ -123,7 +125,7 @@ a:hover { color: #b23622; }
 .filter__extend-check label { font-weight: bold; color: #50739c; }
 .filter__extend-check li label { color: #555; font-weight: normal; }
 
-.icon-street { background: url('../img/icons-s012284cba5.png') 0 -263px no-repeat; width: 16px; height: 16px; }
+.icon-street { background: url('../img/icons-s012284cba5.png') 0 -263px no-repeat; width: 16px; height: 16px; -webkit-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; }
 
 .icon-square { background: url('../img/icons-s012284cba5.png') 0 -289px no-repeat; width: 16px; height: 16px; }
 

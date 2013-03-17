@@ -252,6 +252,7 @@ a{
     li {
         margin-right: 6px;
         padding: 5px 0 5px;
+        padding: 7px 0 3px;
         color: #555;
         cursor: pointer;
         font-size: 12px;
@@ -265,6 +266,7 @@ a{
             margin: 0;
             border: 0;
             padding: 5px 0 5px 16px;
+            vertical-align: top;
         }
     }
     .active-state {
@@ -279,6 +281,14 @@ a{
     }
     label {
         cursor: pointer;
+        span{
+            display: inline-block;
+            vertical-align: top;
+            width: 80%;
+        }
+        input{
+            vertical-align: top;
+        }
     }
 }
 .filter__more {
@@ -286,6 +296,7 @@ a{
     display: inline-block;
     width: 11px;
     height: 11px;
+    height: 16px;
     text-align: center;
     margin: 0 5px 0 4px;
     i {
@@ -316,7 +327,9 @@ a{
         
     }
 }
-.icon-street {@include sized-sprite($icons, street);}
+.icon-street {@include sized-sprite($icons, street); -webkit-background-size: 100% 100%;
+     -o-background-size: 100% 100%;
+        background-size: 100% 100%;}
 .icon-square {@include sized-sprite($icons, square);}
 .icon-park {@include sized-sprite($icons, park);}
 .icon-bridge {@include sized-sprite($icons, bridge);}
