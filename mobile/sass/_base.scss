@@ -27,11 +27,22 @@ $experimental-support-for-svg: true;
 $icons: sprite-map("icons/*.png", $spacing: 10px);
 
 // responsive
-$break-small: 500px;
+// @mixin iphone
+// {
+//   @media only screen and (max-width: 520px) 
+//   {
+//     @content;
+//   }
+// }
+$break-mob: 320px;
+$break-iphone: 500px;
 $break-large: 1180px;
 @mixin respond-to($media) {
-  @if $media == pda {
-    @media only screen and (max-width: $break-small) { @content; }
+  @if $media == iphone {
+    @media only screen and (max-width: $break-iphone) { @content; }
+  }
+  @else if $media == mob {
+    @media only screen and (max-width: $break-mob) { @content; }
   }
   @else if $media == wide {
     @media only screen and (min-width: $break-large) { @content; }
