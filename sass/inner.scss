@@ -17,6 +17,17 @@
         font-weight: normal;
         @include osl;
     }
+    .title-l-2 {
+        margin: 6px 0 13px;
+        font-size: 18px;
+        a {
+            text-decoration: none;
+            border-bottom: 1px solid #C2CEDD;
+            &:hover{
+                border-bottom: 1px solid #b23622;
+            }
+        }
+    }
     p {
         margin-bottom: 12px;
     }
@@ -82,6 +93,10 @@
     color: #8a8a8a;
     a {
         font-size: 12px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     p {
         margin: 4px 0 12px;
@@ -149,6 +164,7 @@
     margin: 15px 0;
     color: #848484;
     font-size: 11px;
+    border-top: 1px solid #f0f0e7;
     li {
         margin-bottom: 6px;
     }
@@ -179,6 +195,45 @@
         padding: 16px 0 10px;
         border-top: 1px solid #bebe98;
         overflow: hidden;
+    }
+    #customBtn {
+        display: inline-block;
+        color: #df4a32;
+        cursor: pointer;
+        width: 460px;
+        font-family: "open_sanslight",Arial,sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+        //background:url(file:///C|/Users/dima/Desktop/sdf) no-repeat;
+
+        &:hover {
+            cursor: pointer;
+            span.icon {
+                background: url('/_img/g-btn-hover.png') 0 50% no-repeat;
+            }
+            span.buttonText {
+                color: #e94a2f;
+                border-bottom:1px solid #e5a59c;
+            }
+        }
+        span.label {
+            font-weight: bold;
+        }
+        span.icon {
+            background: url('/_img/g-btn-base.png') 0 50% no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            width: 54px;
+            height: 54px;
+        }
+        span.buttonText {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            border-bottom:1px solid #fff;
+        }
     }
 }
 .comment__user {

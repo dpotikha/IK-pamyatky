@@ -281,13 +281,16 @@ a{
     }
     label {
         cursor: pointer;
+        vertical-align: top;
         span{
             display: inline-block;
             vertical-align: top;
-            width: 80%;
+            width: 76%;
         }
         input{
             vertical-align: top;
+            position: relative;
+            
         }
     }
 }
@@ -395,6 +398,14 @@ a{
 .tooltip {    
     padding-top: 18px;
     font: normal 13px Arial,sans-serif;
+    &:before{
+        position: absolute;
+        bottom: -29px;
+        @include sized-sprite($icons, bubarr);
+        left: 50%;
+        margin-left: -20px;
+        content:  ' ';
+    }
     p {
         margin-bottom: 15px;
     }

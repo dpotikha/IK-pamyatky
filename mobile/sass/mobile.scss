@@ -53,7 +53,6 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 480px;
     color: #000;
     @include osl;
     font-size: 14px;
@@ -176,8 +175,8 @@ a{
 }
 .search__submit {
     position: absolute;
-    right: 14px;
-    top: 12px;
+    right: 4px;
+    top: 14px;
     @include sized-sprite($icons, glass-gray);
     @extend %hide-text;
 }
@@ -215,10 +214,19 @@ a{
     .drop-list {
         width: 425px;
         right: -58px;
+        a{
+            display: block;
+        }
     } 
     li {
-        &:after {
+        a{
+            position: relative;
+        }
+        a:after {
+            position: absolute;
+            content:' ';
             top: 50%;
+            right: 14px;
             margin-top: -10px;
             @include sized-sprite($icons, arr); 
         }
@@ -270,6 +278,9 @@ a{
     }
 }
 .lang_active {
+    @include background-image(linear-gradient(#ec624e, #841d0d));
+}
+.is-active{
     @include background-image(linear-gradient(#ec624e, #841d0d));
 }
     
