@@ -89,6 +89,9 @@ a{
     position: relative;
     z-index: 2000;
     padding-top: 13px;
+    @include respond-to(iphone) {
+        padding-top: 5px;
+    }
 } 
 .header__wrap {
     margin: 0 10px;
@@ -101,6 +104,7 @@ a{
     @include respond-to(iphone) {
         height: 40px;
         line-height: 40px;
+        margin: 0 5px;
     }
 }
 .header__title {
@@ -108,8 +112,17 @@ a{
     float: left;
     @include osl;
     font-size: 22px;
-    @include respond-to(iphone) {
+    @include respond-to(mob-wide) {
         font-size: 16px;
+        padding-left: 3%;
+    }
+    @include respond-to(iphone) {
+        font-size: 14px;
+        padding-left: 3%;
+    }
+    @include respond-to(mob) {
+        font-size: 16px;
+        padding-left: 3%;
     }
     color: #b23622;
     @include box-sizing(border-box);
@@ -131,6 +144,7 @@ a{
     @include box-sizing(border-box);
     @include respond-to(iphone) {
         height: 40px;
+        width: 40px;
     }
     @include respond-to(mob) {
         width: 30px;
@@ -163,6 +177,9 @@ a{
     position: relative; 
     margin: 0 115px 0 5px;
     padding-top: 2px;
+    @include respond-to(iphone) {
+        margin-right: 80px;
+    }
     @include respond-to(mob) {
         margin-right: 70px;
     }
@@ -185,6 +202,7 @@ a{
     @include respond-to(iphone) {
         padding: 0 30px 0 5px;
         height: 30px;
+        font-size: 16px;
     }
     @include respond-to(mob) {
         height: 33px;
@@ -241,6 +259,14 @@ a{
     .drop-list {
         width: 425px;
         right: -58px;
+        @include respond-to(iphone) {
+            width: 400px;
+            right: -50px;
+        }
+        @include respond-to(mob) {
+            width: 310px;
+            right: -43px;
+        }
         a{
             display: block;
         }
@@ -256,6 +282,14 @@ a{
             right: 14px;
             margin-top: -10px;
             @include sized-sprite($icons, arr); 
+        }
+    }
+}
+.nav.js-active {
+    i {
+        @include sized-sprite($icons, nav-act); 
+        @include respond-to(iphone) {
+            @include sized-sprite($icons, nav-s-act);
         }
     }
 }
@@ -285,31 +319,50 @@ a{
         display: none;
         width: 208px;
         right: -12px;
+        @include respond-to(iphone) {
+            width: 158px;
+            right: -8px;
+        }
         &:before {
             top: -16px;
             right: 10px;
             @include sized-sprite($icons, corner);
+                //top: -16px;
+                right: 1px; 
+            }
         }
     }
     li {
         &:after {
             top: 50%;
             margin-top: -10px;
+            @include respond-to(iphone) {
+                margin-top: -6px;
+            }
         }
     }
     .ua {
         &:after {
             @include sized-sprite($icons, ua);
+            @include respond-to(iphone) {
+            @include sized-sprite($icons, ua);
+            }
         }
     }
     .rus {
         &:after {
+            @include sized-sprite($icons, ru);
+            @include respond-to(iphone) {
             @include sized-sprite($icons, rus);
+            }
         }
     }
     .eng {
         &:after {
+            @include sized-sprite($icons, en);
+            @include respond-to(iphone) {
             @include sized-sprite($icons, eng);
+            }
         }
     }
 }
@@ -332,11 +385,22 @@ a{
     background: #fff; 
     @include box-sizing(border-box);
     @include box-shadow(0 0 15px rgba(0,0,0,.6));
+    @include respond-to(iphone) {
+        top: 45px;
+    }
     &:before {
         content: ""; 
         position: absolute;
         top: -16px;
         right: 51px;
+        @include respond-to(iphone) {
+            top: -12px;
+            right: 41px;
+        }
+        @include respond-to(mob) {
+            top: -12px;
+            right: 34px;
+        }
         @include sized-sprite($icons, corner); 
     }
     li {
@@ -350,6 +414,11 @@ a{
         border-top: 1px solid #939393;
         text-shadow: 0 -1px 0 rgba(0,0,0,.75);
         font-style: normal;
+        @include respond-to(iphone) {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+        }
         &:first-child {
             border: 0;
         }
@@ -357,6 +426,9 @@ a{
             content: "";
             position: absolute;
             right: 15px;
+            @include respond-to(iphone) {
+                right: 8px;
+            }
         }
         i {
             float: right; 
@@ -368,6 +440,9 @@ a{
         font-size: 18px;
         text-decoration: none;
         text-shadow: 0 -1px 0 rgba(0,0,0,.75);
+        @include respond-to(iphone) {
+            font-size: 14px;
+        }
     }
 } 
 
@@ -376,6 +451,9 @@ a{
     position: relative;
     z-index: 1000;
     padding: 22px 25px;
+    @include respond-to(iphone) {
+        padding: 12px 15px;
+    }
 }
 .title-l-1 {
     padding-bottom: 8px;
@@ -385,6 +463,9 @@ a{
     padding: 0 0 8px 40px;
     font-size: 24px;
     line-height: 1.1;   
+    @include respond-to(iphone) {
+        font-size: 20px;
+    }
 }
 .title-l-1,
 .title-l-2 {
@@ -403,6 +484,10 @@ a{
         position: absolute;
         right: 15px;
         top: -4px;
+        @include respond-to (iphone) {
+            right: 0;
+            top: 4px;
+        }
     }
 }
 .catalog {
@@ -413,6 +498,9 @@ a{
         font-size: 16px;
         cursor: pointer;
         border-bottom: 1px solid #d3d2d2;
+        @include respond-to (iphone) {
+            line-height: 40px;
+        }
     }
     a {
         display: block;
@@ -428,6 +516,9 @@ a{
             top: 0;
             margin-top: 15px;
             @include sized-sprite($icons, plus);
+            @include respond-to (iphone) {
+                top: -5px;
+            }
         }
     }
     .extend_active {
@@ -444,6 +535,10 @@ a{
             padding: 0 5px 0 29px;
             font-weight: normal;
             background: #f5f4f4;
+            @include respond-to (iphone) {
+                line-height: 40px;
+                height: 40px;
+            }
             &:after {
                 content: "";
                 position: absolute;
@@ -460,6 +555,9 @@ a{
     li {
         padding: 17px 0;
         border-bottom: 1px solid #d1d1d1;
+        @include respond-to (iphone) {
+            padding: 8px 0;
+        }
     }
     a {
         position: relative;
@@ -491,6 +589,9 @@ a{
     display: inline-block;
     cursor: pointer;
     @include sized-sprite($icons, close);
+    @include respond-to (iphone){
+    @include sized-sprite($icons, close);
+    }
 }
 
 .place {
@@ -499,17 +600,27 @@ a{
     background: #fff;
     padding: 25px 10px 0;
     margin: 10px;
+    @include respond-to (iphone){
+        padding: 15px 10px 0;
+        margin: 5px;
+    }
     .img {
         position: relative;
         overflow: hidden;
         height: 250px;
         background: #fff;
+        img {
+            width: 100%;
+        }
         ul {
             position: absolute;
             bottom: 6px;
             left: 49px;
             @extend %clr;
             background: #fff;
+            @include respond-to (iphone){
+                left: 0px;
+            }
         }
         li {
             position: relative;
@@ -517,6 +628,14 @@ a{
             height: 47px;
             line-height: 47px;
             border-right: 1px solid #ababab;
+            @include respond-to (iphone){
+                width: 65%;
+                height: 40px;
+                line-height: 40px;
+                &.about_link{
+                   width: 34%;
+                }
+            }
             &:last-child {
                 border: 0;
             }
@@ -540,8 +659,14 @@ a{
     .title-l-2 {
         padding: 0 60px 17px;
         border: 0;
+        @include respond-to (iphone){
+            padding: 4px 30px 17px;
+        }
         a {
             left: 15px;
+            @include respond-to (iphone){
+               left: 5px;
+        }
         }
     }
 }
@@ -550,6 +675,10 @@ a{
     font: normal 14px Arial, sans-serif;
     line-height: 1.4;
     border-bottom: 3px solid #b23622;
+    @include respond-to (iphone){
+        padding: 10px 5px 10px;
+        font: normal 12px Arial, sans-serif;
+    }  
 }
 
 .catalog-street {

@@ -1,205 +1,36 @@
-@font-face { font-family: 'open_sanslight'; src: url("../fonts/opensans-light-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+/*
+Syntax error: Invalid CSS after "    }": expected selector or at-rule, was "}"
+        on line 368 of /Users/akella/Desktop/git/IK/mobile/sass/mobile.scss
 
-@font-face { font-family: 'open_sanslight_italic'; src: url("../fonts/opensans-lightitalic-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: 'open_sansregular'; src: url("../fonts/opensans-regular-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
-
-.search__submit { font: 0/0 a; text-shadow: none; color: transparent; }
-
-.wrap:after, .header__wrap:after, .header__nav:after, .place .img ul:after, .letters:after, .support:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-
-/* ------------------------------------- Reset css -------------------------------------------- */
-/* ------------------------------------- Reset css -------------------------------------------- */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
-
-body, html { height: 100%; }
-
-img, fieldset { border: none; }
-
-input[type="submit"], button { cursor: pointer; }
-
-input[type='submit']::-moz-focus-inner { padding: 0; border: 0; }
-
-textarea { overflow: auto; }
-
-input, button { margin: 0; padding: 0; border: 0; }
-
-input, textarea, select, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
-
-ul, ol { list-style-type: none; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-
-table { border-spacing: 0; border-collapse: collapse; }
-
-* { -webkit-text-size-adjust: none; }
-
-/* ------------------------------------- //END Reset css --------------------------------------- */
-/* ----------------------------------------- Main styles --------------------------------------- */
-body { color: #000; font-weight: normal; font-style: normal; font-family: 'open_sanslight', Arial, sans-serif; font-size: 14px; line-height: 1.3; background: #f3f2f2; }
-
-a { color: #355e8d; }
-
-.wrapper { overflow: hidden; }
-
-.l-layout { position: relative; z-index: 1000; background: #fff; padding: 0; min-height: 100%; height: auto !important; height: 100%; margin-bottom: 0; }
-
-.push { clear: both; height: 0; }
-
-.index .l-layout { background: none; position: static; }
-
-/* ------------------------------------ //END Main styles --------------------------------------- */
-/* ----------------------------------------- Header --------------------------------------------- */
-.header { position: relative; z-index: 2000; padding-top: 13px; }
-
-.header__wrap { margin: 0 10px; height: 56px; line-height: 56px; background: #fff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); }
-@media only screen and (max-width: 500px) { .header__wrap { height: 40px; line-height: 40px; } }
-
-.header__title { padding-left: 1%; float: left; font-weight: normal; font-style: normal; font-family: 'open_sanslight', Arial, sans-serif; font-size: 22px; color: #b23622; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-transform: uppercase; }
-@media only screen and (max-width: 500px) { .header__title { font-size: 16px; } }
-
-.header__nav { float: right; }
-
-.location, .search, .nav, .lang { float: left; width: 55px; height: 56px; text-align: center; border-left: 1px solid #939393; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-@media only screen and (max-width: 500px) { .location, .search, .nav, .lang { height: 40px; } }
-@media only screen and (max-width: 320px) { .location, .search, .nav, .lang { width: 30px; } }
-.location i, .search i, .nav i, .lang i { display: inline-block; vertical-align: middle; }
-
-.location { border: 0; }
-.location i { background: url('../img/icons-s4bf36bd0dd.png') 0 -225px no-repeat; width: 29px; height: 29px; }
-@media only screen and (max-width: 500px) { .location i { background: url('../img/icons-s4bf36bd0dd.png') 0 -346px no-repeat; width: 20px; height: 20px; } }
-
-.search i { background: url('../img/icons-s4bf36bd0dd.png') 0 -264px no-repeat; width: 29px; height: 30px; }
-@media only screen and (max-width: 500px) { .search i { background: url('../img/icons-s4bf36bd0dd.png') 0 -376px no-repeat; width: 20px; height: 21px; } }
-
-.search-form { display: none; position: relative; margin: 0 115px 0 5px; padding-top: 2px; }
-@media only screen and (max-width: 320px) { .search-form { margin-right: 70px; } }
-
-.search-form_active { display: block; }
-
-.hidden { display: none; }
-
-.search__text { padding: 0 44px 0 10px; height: 43px; width: 100%; color: #4e4e4e; font-size: 20px; font-family: Arial; border: 1px solid #bebfbf; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-@media only screen and (max-width: 500px) { .search__text { padding: 0 30px 0 5px; height: 30px; } }
-@media only screen and (max-width: 320px) { .search__text { height: 33px; } }
-.search__text:focus { -webkit-box-shadow: inset 0 0 5px rgba(186, 186, 186, 0.75); -moz-box-shadow: inset 0 0 5px rgba(186, 186, 186, 0.75); box-shadow: inset 0 0 5px rgba(186, 186, 186, 0.75); }
-
-.search__submit { position: absolute; right: 4px; top: 14px; background: url('../img/icons-s4bf36bd0dd.png') 0 -304px no-repeat; width: 33px; height: 32px; }
-@media only screen and (max-width: 500px) { .search__submit { top: 11px; background: url('../img/icons-s4bf36bd0dd.png') 0 -459px no-repeat; width: 20px; height: 19px; } }
-
-.search__list { position: absolute; top: 49px; left: 0; padding: 12px 10px; width: 420px; border: 1px solid #aaabab; font-size: 14px; background: #fff; text-align: left; line-height: 1.5; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.search__list li { margin-bottom: 10px; }
-.search__list span { font: normal 11px Arial; color: #606060; }
-.search__list strong { color: #c20e16; font-weight: normal; }
-
-.nav i { position: relative; background: url('../img/icons-s4bf36bd0dd.png') 0 -732px no-repeat; width: 24px; height: 21px; }
-@media only screen and (max-width: 500px) { .nav i { background: url('../img/icons-s4bf36bd0dd.png') 0 -598px no-repeat; width: 17px; height: 15px; } }
-.nav .drop-list { width: 425px; right: -58px; }
-.nav .drop-list a { display: block; }
-.nav li a { position: relative; }
-.nav li a:after { position: absolute; content: ' '; top: 50%; right: 14px; margin-top: -10px; background: url('../img/icons-s4bf36bd0dd.png') 0 -536px no-repeat; width: 14px; height: 21px; }
-
-.lang i { position: relative; }
-.lang .ua-act { background: url('../img/icons-s4bf36bd0dd.png') 0 -703px no-repeat; width: 30px; height: 19px; }
-@media only screen and (max-width: 500px) { .lang .ua-act { background: url('../img/icons-s4bf36bd0dd.png') 0 -763px no-repeat; width: 20px; height: 13px; } }
-.lang .rus-act-act { background: url('../img/icons-s4bf36bd0dd.png') 0 -623px no-repeat; width: 30px; height: 19px; }
-@media only screen and (max-width: 500px) { .lang .rus-act-act { background: url('../img/icons-s4bf36bd0dd.png') 0 -680px no-repeat; width: 20px; height: 13px; } }
-.lang .eng-act-act { background: url('../img/icons-s4bf36bd0dd.png') 0 -407px no-repeat; width: 30px; height: 19px; }
-@media only screen and (max-width: 500px) { .lang .eng-act-act { background: url('../img/icons-s4bf36bd0dd.png') 0 -436px no-repeat; width: 20px; height: 13px; } }
-.lang .drop-list { display: none; width: 208px; right: -12px; }
-.lang .drop-list:before { top: -16px; right: 10px; background: url('../img/icons-s4bf36bd0dd.png') 0 -652px no-repeat; width: 34px; height: 18px; }
-.lang li:after { top: 50%; margin-top: -10px; }
-.lang .ua:after { background: url('../img/icons-s4bf36bd0dd.png') 0 -703px no-repeat; width: 30px; height: 19px; }
-.lang .rus:after { background: url('../img/icons-s4bf36bd0dd.png') 0 -623px no-repeat; width: 30px; height: 19px; }
-.lang .eng:after { background: url('../img/icons-s4bf36bd0dd.png') 0 -407px no-repeat; width: 30px; height: 19px; }
-
-.lang_active { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjNjI0ZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg0MWQwZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ec624e), color-stop(100%, #841d0d)); background-image: -webkit-linear-gradient(#ec624e, #841d0d); background-image: -moz-linear-gradient(#ec624e, #841d0d); background-image: -o-linear-gradient(#ec624e, #841d0d); background-image: -ms-linear-gradient(#ec624e, #841d0d); background-image: linear-gradient(#ec624e, #841d0d); }
-
-.is-active { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjNjI0ZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg0MWQwZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ec624e), color-stop(100%, #841d0d)); background-image: -webkit-linear-gradient(#ec624e, #841d0d); background-image: -moz-linear-gradient(#ec624e, #841d0d); background-image: -o-linear-gradient(#ec624e, #841d0d); background-image: -ms-linear-gradient(#ec624e, #841d0d); background-image: linear-gradient(#ec624e, #841d0d); }
-
-/* -------------------------------------- END Header --------------------------------------------- */
-/* ------------------------------------------ Blocks --------------------------------------------- */
-.drop-list { display: none; position: absolute; top: 59px; z-index: 2000; background: #fff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); }
-.drop-list:before { content: ""; position: absolute; top: -16px; right: 51px; background: url('../img/icons-s4bf36bd0dd.png') 0 -652px no-repeat; width: 34px; height: 18px; }
-.drop-list li { position: relative; padding-left: 20px; text-align: left; height: 47px; line-height: 47px; color: #ce422d; font-size: 14px; border-top: 1px solid #939393; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); font-style: normal; }
-.drop-list li:first-child { border: 0; }
-.drop-list li:after { content: ""; position: absolute; right: 15px; }
-.drop-list li i { float: right; margin-top: 14px; }
-.drop-list a { color: #ce422d; font-size: 18px; text-decoration: none; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); }
-
-.main { position: relative; z-index: 1000; padding: 22px 25px; }
-
-.title-l-1 { padding-bottom: 8px; font-size: 30px; }
-
-.title-l-2 { padding: 0 0 8px 40px; font-size: 24px; line-height: 1.1; }
-
-.title-l-1, .title-l-2 { position: relative; font-weight: normal; font-style: normal; font-family: 'open_sanslight', Arial, sans-serif; color: #797979; border-bottom: 1px solid #000; }
-.title-l-1 .prev, .title-l-2 .prev { content: ""; position: absolute; top: 5px; left: 0; background: url('../img/icons-s4bf36bd0dd.png') 0 -567px no-repeat; width: 14px; height: 21px; }
-.title-l-1 .close, .title-l-2 .close { position: absolute; right: 15px; top: -4px; }
-
-.catalog li { position: relative; line-height: 49px; color: #303030; font-size: 16px; cursor: pointer; border-bottom: 1px solid #d3d2d2; }
-.catalog a { display: block; color: #303030; text-decoration: none; }
-.catalog .extend { font-weight: bold; }
-.catalog .extend:after { content: ""; position: absolute; right: 15px; top: 0; margin-top: 15px; background: url('../img/icons-s4bf36bd0dd.png') 0 -786px no-repeat; width: 20px; height: 20px; }
-.catalog .extend_active:after { margin-top: 24px; background: url('../img/icons-s4bf36bd0dd.png') 0 -816px no-repeat; width: 20px; height: 2px; }
-.catalog ul { display: none; margin-bottom: -1px; }
-.catalog ul li { height: 49px; padding: 0 5px 0 29px; font-weight: normal; background: #f5f4f4; }
-.catalog ul li:after { content: ""; position: absolute; top: 50%; right: 15px; margin-top: -10px; background: url('../img/icons-s4bf36bd0dd.png') 0 -536px no-repeat; width: 14px; height: 21px; }
-
-.catalog-place li { padding: 17px 0; border-bottom: 1px solid #d1d1d1; }
-.catalog-place a { position: relative; display: block; color: #8a8a8a; text-decoration: none; font-size: 12px; }
-.catalog-place a:after { content: ""; position: absolute; top: 50%; right: 15px; margin-top: -10px; background: url('../img/icons-s4bf36bd0dd.png') 0 -536px no-repeat; width: 14px; height: 21px; }
-.catalog-place strong { display: block; margin-bottom: 2px; color: #3e3e3e; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; width: 90%; overflow: hidden; }
-
-.close { display: inline-block; cursor: pointer; background: url('../img/icons-s4bf36bd0dd.png') 0 -488px no-repeat; width: 38px; height: 38px; }
-
-.place { position: relative; z-index: 1000; background: #fff; padding: 25px 10px 0; margin: 10px; }
-.place .img { position: relative; overflow: hidden; height: 250px; background: #fff; }
-.place .img ul { position: absolute; bottom: 6px; left: 49px; background: #fff; }
-.place .img li { position: relative; float: left; height: 47px; line-height: 47px; border-right: 1px solid #ababab; }
-.place .img li:last-child { border: 0; }
-.place .img li:after { content: ""; position: absolute; top: 50%; right: 11px; margin-top: -10px; background: url('../img/icons-s4bf36bd0dd.png') 0 -536px no-repeat; width: 14px; height: 21px; }
-.place .img li a { display: block; padding: 0 48px 0 15px; font-size: 16px; color: #b23622; text-decoration: none; }
-.place .title-l-2 { padding: 0 60px 17px; border: 0; }
-.place .title-l-2 a { left: 15px; }
-
-.content { padding: 10px 20px 20px; font: normal 14px Arial, sans-serif; line-height: 1.4; border-bottom: 3px solid #b23622; }
-
-.catalog-street .title-l-1 { padding-left: 27px; }
-.catalog-street .title-l-1 .prev { top: 7px; right: 0; }
-
-.title-l-1_letters { border-bottom: 0; }
-
-.letters { border-top: 1px solid #545454; }
-.letters li { float: left; margin-right: -1px; width: 87px; height: 85px; line-height: 85px; text-align: center; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dbdbdb; border-top: 0; }
-.letters a { display: block; text-decoration: none; font-size: 36px; font-weight: normal; font-style: normal; font-family: 'open_sanslight', Arial, sans-serif; text-transform: uppercase; color: #303030; }
-
-.about { position: absolute; top: 93px; margin: 0 10px; z-index: 1000; background: #fff; border-bottom: 3px solid #0f2d00; -webkit-box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); box-shadow: 0 0 17px rgba(0, 0, 0, 0.6); }
-.about:before { content: ""; position: absolute; top: -24px; right: 0; top: -16px; right: 75px; background: url('../img/icons-s4bf36bd0dd.png') 0 -652px no-repeat; width: 34px; height: 18px; }
-
-.about__body { padding: 20px; font: normal 16px/1.4 Arial, sans-serif; }
-
-.about__footer { padding: 10px 28px 40px; background: #f7f7f7; }
-
-.support { margin-bottom: 2px; padding-bottom: 24px; border-bottom: 1px solid #8e8e8e; -webkit-box-shadow: 0 1px 0 white; -moz-box-shadow: 0 1px 0 white; box-shadow: 0 1px 0 white; }
-
-.support__title { display: block; margin-bottom: 10px; font-size: 22px; text-align: center; }
-
-.logo { width: 124px; height: 115px; line-height: 112px; text-align: center; background: #fff; border: 1px solid #ccd5c7; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
-.logo i { display: inline-block; vertical-align: middle; }
-
-.logo_map { float: left; margin-left: 50px; }
-.logo_map i { background: url('../img/icons-s4bf36bd0dd.png') 0 0 no-repeat; width: 66px; height: 64px; }
-
-.logo_ik { float: right; margin-right: 50px; }
-.logo_ik i { background: url('../img/icons-s4bf36bd0dd.png') 0 -155px no-repeat; width: 77px; height: 60px; }
-
-.wifi { text-align: center; }
-.wifi i, .wifi div { display: inline-block; vertical-align: middle; }
-.wifi strong { display: block; }
-.wifi i { background: url('../img/icons-s4bf36bd0dd.png') 0 -74px no-repeat; width: 45px; height: 71px; }
-
-.map { position: fixed; top: 0; right: 0; bottom: 0; left: 0; }
-
-/* ---------------------------------------- END Blocks ------------------------------------------- */
+Backtrace:
+/Users/akella/Desktop/git/IK/mobile/sass/mobile.scss:368
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/scss/parser.rb:1127:in `expected'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/scss/parser.rb:1063:in `expected'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/scss/parser.rb:28:in `parse'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/engine.rb:336:in `_to_tree'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/engine.rb:309:in `_render'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/engine.rb:256:in `render'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:140:in `compile'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:126:in `timed'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:139:in `compile'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/logger.rb:45:in `red'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:138:in `compile'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:118:in `compile_if_required'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:103:in `run'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:101:in `each'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:101:in `run'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:126:in `timed'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:100:in `run'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/update_project.rb:45:in `perform'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/base.rb:18:in `execute'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/project_base.rb:19:in `execute'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:29
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:43:in `call'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:43
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"    }\": expected selector or at-rule, was \"}\"\A         on line 368 of /Users/akella/Desktop/git/IK/mobile/sass/mobile.scss"; }
