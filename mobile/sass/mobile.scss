@@ -94,6 +94,7 @@ a{
     }
 } 
 .header__wrap {
+
     margin: 0 10px;
     height: 56px;
     line-height: 56px;
@@ -108,7 +109,7 @@ a{
     }
 }
 .header__title {
-    padding-left: 1%;
+    padding-left: 2%;
     float: left;
     @include osl;
     font-size: 22px;
@@ -121,7 +122,7 @@ a{
         padding-left: 3%;
     }
     @include respond-to(mob) {
-        font-size: 16px;
+        font-size: 11px;
         padding-left: 3%;
     }
     color: #b23622;
@@ -147,7 +148,7 @@ a{
         width: 40px;
     }
     @include respond-to(mob) {
-        width: 30px;
+        width: 35px;
     }
     i {
         display: inline-block;
@@ -303,16 +304,16 @@ a{
             @include sized-sprite($icons, ua-s);
         }
     }
-    .rus-act-act {
-        @include sized-sprite($icons, rus);
+    .ru-act {
+        @include sized-sprite($icons, ru);
         @include respond-to(iphone) {
-            @include sized-sprite($icons, rus-s);
+            @include sized-sprite($icons, ru-s);
         }
     }
-    .eng-act-act {
-        @include sized-sprite($icons, eng);
+    .en-act {
+        @include sized-sprite($icons, en);
         @include respond-to(iphone) {
-            @include sized-sprite($icons, eng-s);
+            @include sized-sprite($icons, en-s);
         }
     }
     .drop-list {
@@ -324,9 +325,9 @@ a{
             right: -8px;
         }
         &:before {
-            top: -16px;
+            //top: -16px;
             right: 10px;
-            @include sized-sprite($icons, corner);
+            @include respond-to(iphone) {
                 //top: -16px;
                 right: 1px; 
             }
@@ -345,23 +346,23 @@ a{
         &:after {
             @include sized-sprite($icons, ua);
             @include respond-to(iphone) {
-            @include sized-sprite($icons, ua);
+                @include sized-sprite($icons, ua-s);
             }
         }
     }
-    .rus {
+    .ru {
         &:after {
             @include sized-sprite($icons, ru);
             @include respond-to(iphone) {
-            @include sized-sprite($icons, rus);
+                @include sized-sprite($icons, ru-s);
             }
         }
     }
-    .eng {
+    .en {
         &:after {
             @include sized-sprite($icons, en);
             @include respond-to(iphone) {
-            @include sized-sprite($icons, eng);
+                @include sized-sprite($icons, en-s);
             }
         }
     }
@@ -369,7 +370,7 @@ a{
 .lang_active {
     @include background-image(linear-gradient(#ec624e, #841d0d));
 }
-.is-active{
+.js-active{
     @include background-image(linear-gradient(#ec624e, #841d0d));
 }
     
@@ -382,7 +383,7 @@ a{
     position: absolute;
     top: 59px;
     z-index: 2000;
-    background: #fff; 
+    background: #fff;
     @include box-sizing(border-box);
     @include box-shadow(0 0 15px rgba(0,0,0,.6));
     @include respond-to(iphone) {
@@ -401,7 +402,7 @@ a{
             top: -12px;
             right: 34px;
         }
-        @include sized-sprite($icons, corner); 
+        @include sized-sprite($icons, corner);
     }
     li {
         position: relative;
@@ -462,7 +463,7 @@ a{
 .title-l-2 {
     padding: 0 0 8px 40px;
     font-size: 24px;
-    line-height: 1.1;   
+    line-height: 1.1;
     @include respond-to(iphone) {
         font-size: 20px;
     }
@@ -590,7 +591,7 @@ a{
     cursor: pointer;
     @include sized-sprite($icons, close);
     @include respond-to (iphone){
-    @include sized-sprite($icons, close);
+        @include sized-sprite($icons, close-s);
     }
 }
 
@@ -607,7 +608,7 @@ a{
     .img {
         position: relative;
         overflow: hidden;
-        height: 250px;
+        //height: 250px;
         background: #fff;
         img {
             width: 100%;
