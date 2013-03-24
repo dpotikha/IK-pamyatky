@@ -102,6 +102,7 @@ a { color: #355e8d; }
 @media only screen and (max-width: 500px) { .nav .drop-list { width: 400px; right: -50px; } }
 @media only screen and (max-width: 320px) { .nav .drop-list { width: 310px; right: -43px; } }
 .nav .drop-list a { display: block; }
+.nav li { cursor: pointer; }
 .nav li a { position: relative; }
 .nav li a:after { position: absolute; content: ' '; top: 50%; right: 14px; margin-top: -10px; background: url('../img/icons-s9925078024.png') 0 -588px no-repeat; width: 14px; height: 21px; }
 
@@ -134,12 +135,12 @@ a { color: #355e8d; }
 
 /* -------------------------------------- END Header --------------------------------------------- */
 /* ------------------------------------------ Blocks --------------------------------------------- */
-.drop-list { display: none; position: absolute; top: 59px; z-index: 2000; background: #fff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); }
+.drop-list { display: none; position: absolute; top: 59px; z-index: 2000; background: #fff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 @media only screen and (max-width: 500px) { .drop-list { top: 45px; } }
 .drop-list:before { content: ""; position: absolute; top: -16px; right: 51px; background: url('../img/icons-s9925078024.png') 0 -733px no-repeat; width: 34px; height: 18px; }
 @media only screen and (max-width: 500px) { .drop-list:before { top: -12px; right: 41px; } }
 @media only screen and (max-width: 320px) { .drop-list:before { top: -12px; right: 34px; } }
-.drop-list li { position: relative; padding-left: 20px; text-align: left; height: 47px; line-height: 47px; color: #ce422d; font-size: 14px; border-top: 1px solid #939393; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); font-style: normal; }
+.drop-list li { cursor: pointer; position: relative; padding-left: 20px; text-align: left; height: 47px; line-height: 47px; color: #ce422d; font-size: 14px; border-top: 1px solid #939393; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); font-style: normal; }
 @media only screen and (max-width: 500px) { .drop-list li { height: 40px; line-height: 40px; padding-left: 10px; } }
 .drop-list li:first-child { border: 0; }
 .drop-list li:after { content: ""; position: absolute; right: 15px; }

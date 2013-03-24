@@ -273,6 +273,7 @@ a{
         }
     } 
     li {
+        cursor: pointer;
         a{
             position: relative;
         }
@@ -385,7 +386,7 @@ a{
     z-index: 2000;
     background: #fff;
     @include box-sizing(border-box);
-    @include box-shadow(0 0 15px rgba(0,0,0,.6));
+//     @include box-shadow(0 0 15px rgba(0,0,0,.6));
     @include respond-to(iphone) {
         top: 45px;
     }
@@ -405,6 +406,7 @@ a{
         @include sized-sprite($icons, corner);
     }
     li {
+        cursor: pointer;
         position: relative;
         padding-left: 20px;
         text-align: left;
