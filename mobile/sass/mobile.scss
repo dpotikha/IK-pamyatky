@@ -204,6 +204,7 @@ a{
         padding: 0 30px 0 5px;
         height: 30px;
         font-size: 16px;
+        padding-right: 13px;
     }
     @include respond-to(mob) {
         height: 33px;
@@ -421,7 +422,7 @@ a{
         color: #ce422d;
         font-size: 14px;
         border-top: 1px solid #939393;
-        text-shadow: 0 -1px 0 rgba(0,0,0,.75);
+//         text-shadow: 0 -1px 0 rgba(0,0,0,.75);
         font-style: normal;
         @include respond-to(iphone) {
             height: 40px;
@@ -448,7 +449,7 @@ a{
         color: #ce422d;
         font-size: 18px;
         text-decoration: none;
-        text-shadow: 0 -1px 0 rgba(0,0,0,.75);
+        //text-shadow: 0 -1px 0 rgba(0,0,0,.75);
         display: block;
         @include respond-to(iphone) {
             font-size: 14px;
@@ -780,6 +781,7 @@ a{
     @extend %clr;
     border-bottom: 1px solid #8e8e8e;
     @include box-shadow(0 1px 0 #fff);
+    text-align: center;
 }
 .support__title {
     display: block;
@@ -788,7 +790,7 @@ a{
     text-align: center;
 }
 .logo {
-    width: 124px;
+    width: 120px;
     height: 115px;
     line-height: 112px;
     text-align: center;
@@ -801,17 +803,24 @@ a{
     }
 }
 .logo_map {
-    float: left;
+    display: inline-block;
     margin-left: 50px;
     i {
         @include sized-sprite($icons, logo-map);
     }
+    @include respond-to(iphone){
+        margin-left: 0;
+        margin-right: 5px;
+    }
 }
 .logo_ik {
-    float: right;
+    display: inline-block;
     margin-right: 50px;
     i {
         @include sized-sprite($icons, logo);
+    }
+    @include respond-to(iphone){
+        margin-right: 0;
     }
 }
 .wifi {

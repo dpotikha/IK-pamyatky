@@ -84,7 +84,7 @@ a { color: #355e8d; }
 .hidden { display: none; }
 
 .search__text { padding: 0 44px 0 10px; height: 43px; width: 100%; color: #4e4e4e; font-size: 20px; font-family: Arial; border: 1px solid #bebfbf; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-@media only screen and (max-width: 500px) { .search__text { padding: 0 30px 0 5px; height: 30px; font-size: 16px; } }
+@media only screen and (max-width: 500px) { .search__text { padding: 0 30px 0 5px; height: 30px; font-size: 16px; padding-right: 13px; } }
 @media only screen and (max-width: 380px) { .search__text { height: 33px; } }
 .search__text:focus { -webkit-box-shadow: inset 0 0 5px rgba(186, 186, 186, 0.75); -moz-box-shadow: inset 0 0 5px rgba(186, 186, 186, 0.75); box-shadow: inset 0 0 5px rgba(186, 186, 186, 0.75); }
 
@@ -141,13 +141,13 @@ a { color: #355e8d; }
 .drop-list:before { content: ""; position: absolute; top: -16px; right: 51px; background: url('../img/icons-s9925078024.png') 0 -733px no-repeat; width: 34px; height: 18px; }
 @media only screen and (max-width: 500px) { .drop-list:before { top: -12px; right: 41px; } }
 @media only screen and (max-width: 380px) { .drop-list:before { top: -12px; right: 34px; } }
-.drop-list li { cursor: pointer; position: relative; padding-left: 20px; text-align: left; height: 47px; line-height: 47px; color: #ce422d; font-size: 14px; border-top: 1px solid #939393; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); font-style: normal; }
+.drop-list li { cursor: pointer; position: relative; padding-left: 20px; text-align: left; height: 47px; line-height: 47px; color: #ce422d; font-size: 14px; border-top: 1px solid #939393; font-style: normal; }
 @media only screen and (max-width: 500px) { .drop-list li { height: 40px; line-height: 40px; padding-left: 10px; } }
 .drop-list li:first-child { border: 0; }
 .drop-list li:after { content: ""; position: absolute; right: 15px; }
 @media only screen and (max-width: 500px) { .drop-list li:after { right: 8px; } }
 .drop-list li i { float: right; margin-top: 14px; }
-.drop-list a { color: #ce422d; font-size: 18px; text-decoration: none; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); display: block; }
+.drop-list a { color: #ce422d; font-size: 18px; text-decoration: none; display: block; }
 @media only screen and (max-width: 500px) { .drop-list a { font-size: 14px; } }
 
 .main { position: relative; z-index: 1000; padding: 22px 25px; }
@@ -220,21 +220,24 @@ a { color: #355e8d; }
 .about:before { content: ""; position: absolute; top: -24px; right: 0; top: -16px; right: 75px; background: url('../img/icons-s9925078024.png') 0 -733px no-repeat; width: 34px; height: 18px; }
 
 .about__body { padding: 20px; font: normal 16px/1.4 Arial, sans-serif; }
+@media only screen and (max-width: 500px) { .about__body { font: normal 12px/1.4 Arial, sans-serif; } }
 
 .about__footer { padding: 10px 28px 40px; background: #f7f7f7; }
 
-.support { margin-bottom: 2px; padding-bottom: 24px; border-bottom: 1px solid #8e8e8e; -webkit-box-shadow: 0 1px 0 white; -moz-box-shadow: 0 1px 0 white; box-shadow: 0 1px 0 white; }
+.support { margin-bottom: 2px; padding-bottom: 24px; border-bottom: 1px solid #8e8e8e; -webkit-box-shadow: 0 1px 0 white; -moz-box-shadow: 0 1px 0 white; box-shadow: 0 1px 0 white; text-align: center; }
 
 .support__title { display: block; margin-bottom: 10px; font-size: 22px; text-align: center; }
 
-.logo { width: 124px; height: 115px; line-height: 112px; text-align: center; background: #fff; border: 1px solid #ccd5c7; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+.logo { width: 120px; height: 115px; line-height: 112px; text-align: center; background: #fff; border: 1px solid #ccd5c7; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 .logo i { display: inline-block; vertical-align: middle; }
 
-.logo_map { float: left; margin-left: 50px; }
+.logo_map { display: inline-block; margin-left: 50px; }
 .logo_map i { background: url('../img/icons-s9925078024.png') 0 0 no-repeat; width: 66px; height: 64px; }
+@media only screen and (max-width: 500px) { .logo_map { margin-left: 0; margin-right: 5px; } }
 
-.logo_ik { float: right; margin-right: 50px; }
+.logo_ik { display: inline-block; margin-right: 50px; }
 .logo_ik i { background: url('../img/icons-s9925078024.png') 0 -155px no-repeat; width: 77px; height: 60px; }
+@media only screen and (max-width: 500px) { .logo_ik { margin-right: 0; } }
 
 .wifi { text-align: center; }
 .wifi i, .wifi div { display: inline-block; vertical-align: middle; }
