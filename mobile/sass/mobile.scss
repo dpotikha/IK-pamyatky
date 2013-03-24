@@ -766,6 +766,9 @@ a{
 .about__body {
     padding: 20px;
     font: normal 16px/1.4 Arial, sans-serif;
+    @include respond-to(iphone){
+        font: normal 12px/1.4 Arial, sans-serif;
+    }
 }
 .about__footer {
     padding: 10px 28px 40px;
