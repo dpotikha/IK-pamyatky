@@ -335,16 +335,22 @@ a{
         }
     }
     li {
-        &:after {
+        a{
+            position: relative;
+        }
+        a:after {
+            content:' ';
             top: 50%;
             margin-top: -10px;
+            right: 10px;
+            position: absolute;
             @include respond-to(iphone) {
                 margin-top: -6px;
             }
         }
     }
     .ua {
-        &:after {
+        a:after {
             @include sized-sprite($icons, ua);
             @include respond-to(iphone) {
                 @include sized-sprite($icons, ua-s);
@@ -352,7 +358,7 @@ a{
         }
     }
     .ru {
-        &:after {
+        a:after {
             @include sized-sprite($icons, ru);
             @include respond-to(iphone) {
                 @include sized-sprite($icons, ru-s);
@@ -360,7 +366,7 @@ a{
         }
     }
     .en {
-        &:after {
+        a:after {
             @include sized-sprite($icons, en);
             @include respond-to(iphone) {
                 @include sized-sprite($icons, en-s);
@@ -443,6 +449,7 @@ a{
         font-size: 18px;
         text-decoration: none;
         text-shadow: 0 -1px 0 rgba(0,0,0,.75);
+        display: block;
         @include respond-to(iphone) {
             font-size: 14px;
         }
@@ -741,6 +748,11 @@ a{
     background: #fff;
     border-bottom: 3px solid #0f2d00;
     @include box-shadow(0 0 17px rgba(0,0,0,.6));
+    .close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
     &:before {
         content: ""; 
         position: absolute;

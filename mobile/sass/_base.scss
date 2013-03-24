@@ -34,7 +34,7 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 //     @content;
 //   }
 // }
-$break-mob: 320px;
+$break-mob: 380px;
 $break-iphone: 500px;
 $break-large: 1180px;
 @mixin respond-to($media) {
