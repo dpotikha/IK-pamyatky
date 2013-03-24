@@ -610,14 +610,21 @@ a{
         overflow: hidden;
         //height: 250px;
         background: #fff;
+        text-align: center;
         img {
             width: 100%;
+            width: auto;
+            @include respond-to (iphone){
+                width: 100%;
+            }
         }
         ul {
-            position: absolute;
-            bottom: 6px;
-            left: 49px;
+//             position: absolute;
+//             bottom: 6px;
+//             left: 49px;
             @extend %clr;
+            width: 100%;
+            text-align: center;
             background: #fff;
             @include respond-to (iphone){
                 left: 0px;
@@ -625,12 +632,12 @@ a{
         }
         li {
             position: relative;
-            float: left;
+            display: inline-block;
             height: 47px;
             line-height: 47px;
             border-right: 1px solid #ababab;
             @include respond-to (iphone){
-                width: 65%;
+//                 width: 65%;
                 height: 40px;
                 line-height: 40px;
                 &.about_link{
@@ -647,6 +654,7 @@ a{
                 right: 11px;
                 margin-top: -10px;
                 @include sized-sprite($icons, arr);
+                @include transform(scale(.8));
             }
             a {
                 display: block;
@@ -654,6 +662,10 @@ a{
                 font-size: 16px;
                 color: #b23622;
                 text-decoration: none;
+                @include respond-to (iphone){
+                    font-size: 12px;
+                    padding: 0 28px 0 5px;
+                }
             }
         }
     }

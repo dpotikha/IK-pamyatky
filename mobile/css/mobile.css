@@ -184,16 +184,18 @@ a { color: #355e8d; }
 
 .place { position: relative; z-index: 1000; background: #fff; padding: 25px 10px 0; margin: 10px; }
 @media only screen and (max-width: 500px) { .place { padding: 15px 10px 0; margin: 5px; } }
-.place .img { position: relative; overflow: hidden; background: #fff; }
-.place .img img { width: 100%; }
-.place .img ul { position: absolute; bottom: 6px; left: 49px; background: #fff; }
+.place .img { position: relative; overflow: hidden; background: #fff; text-align: center; }
+.place .img img { width: 100%; width: auto; }
+@media only screen and (max-width: 500px) { .place .img img { width: 100%; } }
+.place .img ul { width: 100%; text-align: center; background: #fff; }
 @media only screen and (max-width: 500px) { .place .img ul { left: 0px; } }
-.place .img li { position: relative; float: left; height: 47px; line-height: 47px; border-right: 1px solid #ababab; }
-@media only screen and (max-width: 500px) { .place .img li { width: 65%; height: 40px; line-height: 40px; }
+.place .img li { position: relative; display: inline-block; height: 47px; line-height: 47px; border-right: 1px solid #ababab; }
+@media only screen and (max-width: 500px) { .place .img li { height: 40px; line-height: 40px; }
   .place .img li.about_link { width: 34%; } }
 .place .img li:last-child { border: 0; }
-.place .img li:after { content: ""; position: absolute; top: 50%; right: 11px; margin-top: -10px; background: url('../img/icons-s9925078024.png') 0 -588px no-repeat; width: 14px; height: 21px; }
+.place .img li:after { content: ""; position: absolute; top: 50%; right: 11px; margin-top: -10px; background: url('../img/icons-s9925078024.png') 0 -588px no-repeat; width: 14px; height: 21px; -webkit-transform: scale(0.8); -moz-transform: scale(0.8); -ms-transform: scale(0.8); -o-transform: scale(0.8); transform: scale(0.8); }
 .place .img li a { display: block; padding: 0 48px 0 15px; font-size: 16px; color: #b23622; text-decoration: none; }
+@media only screen and (max-width: 500px) { .place .img li a { font-size: 12px; padding: 0 28px 0 5px; } }
 .place .title-l-2 { padding: 0 60px 17px; border: 0; }
 @media only screen and (max-width: 500px) { .place .title-l-2 { padding: 4px 30px 17px; } }
 .place .title-l-2 a { left: 15px; }
