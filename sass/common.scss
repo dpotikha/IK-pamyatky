@@ -409,10 +409,20 @@ a{
     p {
         margin-bottom: 15px;
     }
-    img {
+    .imgPreview {
         float: right;
-        margin: 0 10px 5px 5px;
+        img {
+            //float: right;
+            margin: 0 10px 5px 5px;
+        }
+        span{
+            display: block;
+            text-align: center;
+            font-size: 11px;
+        }
     }
+    
+
 }
 .tooltip__main  {
     width: 400px;
