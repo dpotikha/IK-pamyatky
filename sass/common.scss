@@ -104,6 +104,9 @@ a{
     a {
         display: block;
         @include sized-sprite($icons, logo);
+        .en {
+            @include sized-sprite($icons, logo-en);
+        }
     }
 }
 .nav-wrap {
