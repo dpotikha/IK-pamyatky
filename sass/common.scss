@@ -104,7 +104,7 @@ a{
     a {
         display: block;
         @include sized-sprite($icons, logo);
-        .en {
+        &.en {
             @include sized-sprite($icons, logo-en);
         }
     }
