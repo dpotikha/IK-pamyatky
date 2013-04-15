@@ -36,6 +36,7 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 // }
 $break-mob: 380px;
 $break-iphone: 500px;
+$break-ipad: 1024px;
 $break-large: 1180px;
 @mixin respond-to($media) {
   @if $media == iphone {

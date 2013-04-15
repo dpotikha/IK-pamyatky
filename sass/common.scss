@@ -58,6 +58,7 @@ body{
     font-size: 14px;
     line-height: 1.3;
     background: #f3f2f2;
+    min-width:960px;
 }
 a{
     color: #355e8d;
@@ -94,7 +95,7 @@ a{
     @include border-radius(2px);
 } 
 .header__wrap {
-    padding: 13px 29px 7px 34px;
+    padding: 13px 0px 16px 27px;
     background: #fff;
     @include box-shadow(0 0 4px rgba(0,0,0,.4));
 }
@@ -170,6 +171,9 @@ a{
     margin: 13px 26px 0 0;
     width: 350px;
     vertical-align: top;
+    @include respond-to(ipad){
+        width:210px;
+    }
 }
 .search__text {
     padding: 0 40px 0 10px;
@@ -179,8 +183,12 @@ a{
     font-size: 14px;
     font-family: Arial, sans-serif;
     border: 1px solid #aaabab;
-    @include placeholder(#b8b8b8, Arial); 
+    @include placeholder(#b8b8b8, Arial);
+    @include respond-to(ipad){
+        width:160px;
+    }
 }
+
 .search__submit {
     position: absolute;
     top: 9px;
@@ -219,6 +227,8 @@ a{
     text-decoration: none;
     color: #555;
     font-family: Arial, sans-serif;
+    float: left;
+    margin-right: 20px;
     @include sized-sprite($icons, logo-map);
 }
 
@@ -396,7 +406,7 @@ a{
 
 .tooltip-wrap {
     background: #fff;
-    border: 1px solid #ababab;
+    //border: 1px solid #ababab;
 }
 .tooltip {    
     padding-top: 18px;
@@ -450,8 +460,8 @@ a{
     }
 }
 .tooltip__nav {
-    padding: 13px 0 16px;
-    text-align: center;
+    padding: 13px 0 16px 10px;
+    //text-align: center;
     a {
         display: inline-block;
         margin: 0 7px;

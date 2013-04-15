@@ -148,12 +148,16 @@
     }
 }
 .galler__more {
-    margin: 15px 10px 15px 0;
-    padding: 15px 0;
+    margin: 15px 10px 0 0;
+    //padding: 15px 0;
     border-top: 1px solid #f0f0e7;
-    border-bottom: 1px solid #f0f0e7;
     li {
-        margin-bottom: 6px;
+        //margin-bottom: 6px;
+        border-bottom: 1px solid #f0f0e7;
+        padding:10px 0 10px 0;
+        &:last-child {
+            border-bottom:0;
+        }
     }
     a {
         font-size: 12px;
@@ -161,12 +165,11 @@
     }
 }
 .gallery__meta {
-    margin: 15px 0;
     color: #848484;
     font-size: 11px;
     border-top: 1px solid #f0f0e7;
     li {
-        margin-bottom: 6px;
+        padding: 10px 0 10px 0;
     }
 }
 .catalog-wrap {

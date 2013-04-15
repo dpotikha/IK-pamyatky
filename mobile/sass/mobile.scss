@@ -118,7 +118,7 @@ a{
         padding-left: 3%;
     }
     @include respond-to(iphone) {
-        font-size: 14px;
+        font-size: 13px;
         padding-left: 3%;
     }
     @include respond-to(mob) {
@@ -262,7 +262,7 @@ a{
         width: 425px;
         right: -58px;
         @include respond-to(iphone) {
-            width: 400px;
+            width: 370px;
             right: -50px;
         }
         @include respond-to(mob) {
@@ -636,6 +636,7 @@ a{
             width: 100%;
             text-align: center;
             background: #fff;
+            border-bottom: 1px solid #ababab;
             @include respond-to (iphone){
                 left: 0px;
             }
@@ -646,16 +647,18 @@ a{
             height: 47px;
             line-height: 47px;
             border-right: 1px solid #ababab;
+            width: 49%;
+            text-align: left;
             @include respond-to (iphone){
 //                 width: 65%;
                 height: 40px;
                 line-height: 40px;
                 &.about_link{
-                   width: 34%;
+                   //width: 34%;
                 }
             }
             &:last-child {
-                border: 0;
+                border-right: 0;
             }
             &:after {
                 content: "";
@@ -663,7 +666,7 @@ a{
                 top: 50%;
                 right: 11px;
                 margin-top: -10px;
-                @include sized-sprite($icons, arr);
+                @include sized-sprite($icons, ext);
                 @include transform(scale(.8));
             }
             a {
@@ -678,6 +681,44 @@ a{
                 }
             }
         }
+    }
+    .excursion {
+            position: relative;
+            display: inline-block;
+            height: 47px;
+            line-height: 47px;
+            border: 1px solid #ababab;
+            width: 100%;
+            text-align: left;
+            margin: 10px 0 -10px 0;
+            @include respond-to (iphone){
+//                 width: 65%;
+                height: 40px;
+                line-height: 40px;
+                &.about_link{
+                   //width: 34%;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 11px;
+                margin-top: -10px;
+                @include sized-sprite($icons, ext);
+                @include transform(scale(.8));
+            }
+            a {
+                display: block;
+                padding: 0 48px 0 15px;
+                font-size: 16px;
+                color: #b23622;
+                text-decoration: none;
+                @include respond-to (iphone){
+                    font-size: 12px;
+                    padding: 0 28px 0 5px;
+                }
+            }
     }
     .title-l-2 {
         padding: 0 60px 17px;

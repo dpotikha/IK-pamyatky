@@ -40,10 +40,14 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 
 // responsive
 $break-small: 500px;
+$break-ipad: 1065px;
 $break-large: 1180px;
 @mixin respond-to($media) {
   @if $media == pda {
     @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == ipad {
+    @media only screen and (max-width: $break-ipad) { @content; }
   }
   @else if $media == wide {
     @media only screen and (min-width: $break-large) { @content; }
@@ -140,7 +144,7 @@ $break-large: 1180px;
 }
 
 @mixin gray(){
-  filter: url(../img/filter.svg#grayscale);
+  filter: url(../_img/filter.svg#grayscale);
   filter: gray;
   -o-filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
