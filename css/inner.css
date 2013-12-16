@@ -15,6 +15,7 @@
 .content .title-l-2 { margin: 6px 0 13px; font-size: 18px; }
 .content .title-l-2 a { text-decoration: none; border-bottom: 1px solid #c2cedd; }
 .content .title-l-2 a:hover { border-bottom: 1px solid #b23622; }
+.content .subTitle-l-2 { font-size: 11px; }
 .content p { margin-bottom: 12px; }
 .content .about-us { float: left; width: 60%; margin-right: 5%; }
 .content .more-maps { float: left; width: 35%; }
